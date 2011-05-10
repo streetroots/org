@@ -1,4 +1,3 @@
-// $Id: rotating_banner.admin.js,v 1.30 2010/10/20 17:02:16 jameselliott Exp $
 
 /*jslint bitwise: true, eqeqeq: true, immed: true, newcap: true, nomen: false,
  onevar: false, plusplus: false, regexp: true, undef: true, white: true, indent: 2

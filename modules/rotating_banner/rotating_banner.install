@@ -1,5 +1,4 @@
 <?php
-//$Id: rotating_banner.install,v 1.7 2010/05/11 11:14:19 JacobSingh Exp $
 /**
  * Implements hook_schema().
  */

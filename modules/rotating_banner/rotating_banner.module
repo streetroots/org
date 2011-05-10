@@ -1,5 +1,4 @@
 <?php
-//$Id: rotating_banner.module,v 1.74 2011/01/24 17:15:33 JacobSingh Exp $
 
 include_once 'rotating_banner.classes.inc';
 /**
@@ -348,7 +347,12 @@ function rotating_banner_block_configure($delta) {
   $rb_form['banner_settings']['controls'] = array(
     '#type' => 'select',
     '#title' => t('Type of control to switch between slides'),
-    '#options' => array('none' => t('None'), 'buttons' => t('Buttons'), 'numbers' => t('Numbers')),
+    '#options' => array(
+      'none' => t('None'),
+      'buttons' => t('Buttons'),
+      'numbers' => t('Numbers'),
+      'prev_next' => t('Prev / Next'),
+    ),
     '#default_value' => $settings['controls'],
   );
   
@@ -493,19 +497,21 @@ function theme_rotating_banner($variables) {
     }
 
     $file = file_load($slide->fid);
+    if ($file) {
+      $size = getimagesize($file->uri);
+      if ($size[0] < $smallest || $smallest == NULL) {
+        $smallest = $size[0];
+      }
+
+      // Determine if the slide has the smallest w/h ratio
+      if (($size[0]/$size[1]) < $ratio || $ratio == NULL) {
+        $ratio = $size[0]/$size[1];
+        $ratioPointer = $k;
+      }
+    }
+    
     $link = $slide->link;
-    
-    $size = getimagesize($file->uri);
-    if ($size[0] < $smallest || $smallest == NULL) {
-      $smallest = $size[0];
-    }
-    
-    // Determine if the slide has the smallest w/h ratio
-    if (($size[0]/$size[1]) < $ratio || $ratio == NULL) {
-      $ratio = $size[0]/$size[1];
-      $ratioPointer = $k;
-    }
-    
+
     $textboxes = $slide->textboxes;
     $layout = $slide->layout;
 
@@ -534,7 +540,9 @@ function theme_rotating_banner($variables) {
   
   // If the banner is fluid or doesn't have a set width, we need to use the width of the narrowest slide that we calculated earlier
   if ($fluid || $settings['width'] <= 0) {
-    $style .= $smallest . "px;";
+    if ($smallest) {
+      $style .= $smallest . "px;";
+    }
     $element['#prefix'] = $element['#prefix'] . '" style="' . $style . '">' . "\n\t";
   } else {
     
@@ -543,8 +551,11 @@ function theme_rotating_banner($variables) {
   }
 
   if (isset($settings['controls'])) {
+    $content = $settings['controls'] == 'prev_next' ? '<a href="#" class="prev">' . t('Prev') . '</a><a href="#" class="next">' . t('Next') . '</a>' : '';
+
+
     $element['controls'] = array(
-      '#markup' => '<div class="' . $settings['controls'] . ' controls"></div>',
+      '#markup' => '<div class="' . $settings['controls'] . ' controls">' . $content . '</div>',
     );
   }
   
@@ -662,7 +673,7 @@ function theme_rotating_banner_slide_image($variables) {
   }
   
   if ($image_url) {
-    $output .= "\n" . '<img src="' . $image_url . '" class="rb-background-image"' . ' />';
+    $output .= "\n" . theme('image', array('path' => $image_url, 'attributes' => array('class' => 'rb-background-image')));
   }
   if ($link) {
     $output = l($output, $link, array('html' => TRUE, 'attributes' => array('class' => array('rb-link'))));

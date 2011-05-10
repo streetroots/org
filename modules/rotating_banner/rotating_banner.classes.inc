@@ -1,5 +1,4 @@
 <?php
-// $Id: rotating_banner.classes.inc,v 1.6 2011/01/24 17:15:33 JacobSingh Exp $
 
 class RotatingBannerSlide extends SimpleActiveRecord{
   public $sid;
@@ -168,6 +167,7 @@ class RotatingBanner extends SimpleActiveRecord {
     //@todo: add variables here.
     static $defaults = array(
       'controls' => 'buttons',
+      'prev_next' => 0,
       'width' => '',
       'height' => '',
       'fluid' => TRUE,

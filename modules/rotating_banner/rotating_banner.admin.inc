@@ -1,5 +1,4 @@
 <?php
-// $Id: rotating_banner.admin.inc,v 1.30 2011/01/24 17:15:33 JacobSingh Exp $
 
 /**
  * @see rotating_banner_slide_form().
@@ -31,7 +30,7 @@ function rotating_banner_slide_edit($form, &$form_state, $slide) {
 function rotating_banner_slide_form($form, &$form_state, $banner, $slide = NULL) {
   global $base_url;
   $slide_defaults = RotatingBannerSlide::getDefaultSettings();
-  include_once drupal_get_path('module', 'media') . '/media.browser.inc';
+  include_once drupal_get_path('module', 'media') . '/wysiwyg_plugins/media.inc';
   media_include_browser_js();
 
   drupal_add_js(array('rotatingBanner' => $banner->settings), 'setting');
