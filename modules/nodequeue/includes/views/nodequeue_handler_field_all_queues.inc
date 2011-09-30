@@ -1,13 +1,14 @@
 <?php
-//$Id: nodequeue_handler_field_all_queues.inc,v 1.3 2010/12/24 20:55:09 ezrag Exp $
+
 /**
+ * @file
  * Field handler for all queues.
  *
  * @ingroup views_field_handlers
  */
 class nodequeue_handler_field_all_queues extends views_handler_field_prerender_list {
   /**
-   * Provide meaningful defaults
+   * Provide meaningful defaults.
    */
   function options(&$options) {
     parent::options($options);
@@ -79,4 +80,3 @@ class nodequeue_handler_field_all_queues extends views_handler_field_prerender_l
     }
   }
 }
-

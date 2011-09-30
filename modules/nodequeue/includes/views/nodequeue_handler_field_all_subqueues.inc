@@ -1,6 +1,7 @@
 <?php
-//$Id: nodequeue_handler_field_all_subqueues.inc,v 1.3 2010/10/07 02:50:35 ezrag Exp $
+
 /**
+ * @file
  * Field handler for all subqueues
  *
  * @ingroup views_field_handlers

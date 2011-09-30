@@ -1,12 +1,14 @@
 <?php
-// $Id: nodequeue_service.inc,v 1.2 2010/10/07 02:50:35 ezrag Exp $
 
 /**
+ * @file
+ * Miscellaneous functions for Nodequeue Service.
+ *
  * @author Greg Harvey - http://www.drupaler.co.uk
  */
 
 /**
- * returns an array of available nodequeue "channels" available
+ * Returns an array of available nodequeue "channels" available.
  *
  * @return
  * array with key of nodequeue ids and all settings within
@@ -14,10 +16,9 @@
 function nodequeue_service_get_nodequeues() {
   if (module_exists('nodequeue')) {
     // Fetch all of the queues.
-
     $queues = nodequeue_load_queues(nodequeue_get_all_qids(0));
     if (empty($queues)) {
-      return services_error(t('Nodequeue available, but no nodequeues exist'));
+      return services_error(t('Nodequeue available, but no nodequeues exist.'));
     }
     else {
       $availablequeues = array();
@@ -48,7 +49,7 @@ function nodequeue_service_get_nodequeues() {
 }
 
 /**
- * returns an array of available subqueues by parent queue id
+ * Returns an array of available subqueues by parent queue id.
  *
  * @param $qid
  * integer representing the queue id of the parent nodequeue
@@ -79,7 +80,7 @@ function nodequeue_service_get_subqueues($qid) {
 }
 
 /**
- * access callback function for the nodequeue service
+ * Access callback function for the nodequeue service.
  */
 function nodequeue_service_get_nodequeues_access() {
   if (user_access('get nodequeues')) {
