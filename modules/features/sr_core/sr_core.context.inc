@@ -343,12 +343,6 @@ function sr_core_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'rotating_banner-2' => array(
-          'module' => 'rotating_banner',
-          'delta' => 2,
-          'region' => 'content',
-          'weight' => '-31',
-        ),
         'boxes-our_people' => array(
           'module' => 'boxes',
           'delta' => 'our_people',
