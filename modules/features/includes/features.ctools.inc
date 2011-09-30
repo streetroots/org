@@ -1,5 +1,4 @@
 <?php
-// $Id: features.ctools.inc,v 1.1.2.17.2.4 2010/09/28 16:41:36 yhahn Exp $
 
 /**
  * This is a wild hack, but effective.
@@ -26,7 +25,7 @@ foreach (_ctools_features_get_info() as $component => $info) {
 }
 
 /**
- * Implementation of hook_features_api().
+ * Implements hook_features_api().
  */
 function ctools_features_api() {
   return array(
@@ -42,7 +41,7 @@ function ctools_features_api() {
 }
 
 /**
- * Implementation of hook_features_export().
+ * Implements hook_features_export().
  * Adds references to the ctools mothership hook, ctools_plugin_api().
  */
 function ctools_features_export($data, &$export, $module_name = '') {
@@ -63,25 +62,37 @@ function ctools_features_export($data, &$export, $module_name = '') {
 }
 
 /**
- * Implementation of hook_features_export_render().
+ * Implements hook_features_export_render().
  * Adds the ctools mothership hook, ctools_plugin_api().
  */
 function ctools_features_export_render($module, $data) {
   $code = array();
   $code[] = '  list($module, $api) = func_get_args();';
 
-  $first = TRUE;
+  $component_exports =  array();
   foreach ($data as $component) {
-    if ($info = _ctools_features_get_info($component)) {
-      $if = $first ? 'if' : 'elseif';
-      $code[] = '  '. $if .' ($module == "'. $info['module'] .'" && $api == "'. $info['api'] .'") {';
-      $code[] = '    return array("version" => '. $info['current_version'] .');';
-      $code[] = '  }';
+    $code = array();
+    $code[] = '  list($module, $api) = func_get_args();';
 
-      $first = FALSE;
+    if ($info = _ctools_features_get_info($component)) {
+
+      $code[] = '  if ($module == "'. $info['module'] .'" && $api == "'. $info['api'] .'") {';
+      $code[] = '    return array("version" => "'. $info['current_version'] .'");';
+      $code[] = '  }';
+    }
+    ctools_include('plugins');
+    $plugin_api_hook_name = ctools_plugin_api_get_hook($info['module'], $info['api']);
+
+    if (key_exists($plugin_api_hook_name, $component_exports)) {
+        $component_exports[$plugin_api_hook_name] .= "\n" . implode("\n", $code);
+    }
+    else {
+        $component_exports[$plugin_api_hook_name] = implode("\n", $code);
     }
   }
-  return array('ctools_plugin_api' => implode("\n", $code));
+
+  return $component_exports;
+
 }
 
 /**
@@ -93,9 +104,7 @@ function ctools_features_export_render($module, $data) {
 function ctools_component_features_api($module_name) {
   $api = array();
   foreach (_ctools_features_get_info() as $component => $info) {
-    if ($info['module'] === $module_name) {
-      $api[$component] = $info;
-    }
+    $api[$component] = $info;
   }
   return $api;
 }
@@ -187,7 +196,10 @@ function ctools_component_features_export_render($component, $module, $data) {
  */
 function ctools_component_features_revert($component, $module) {
   if ($objects = features_get_default($component, $module)) {
-    foreach ($objects as $object) {
+    foreach ($objects as $name => $object) {
+      // Some things (like views) do not use the machine name as key
+      // and need to be loaded explicitly in order to be deleted.
+      $object = ctools_export_crud_load($component, $name);
       _ctools_features_export_crud_delete($component, $object);
     }
   }
@@ -300,7 +312,7 @@ function _ctools_features_export_crud_delete($table, $object) {
 }
 
 /**
- * Implementation of hook_features_export_render() for page_manager.
+ * Implements hook_features_export_render() for page_manager.
  */
 function page_manager_pages_features_export_render($module, $data) {
   // Ensure that handlers have their code included before exporting.
