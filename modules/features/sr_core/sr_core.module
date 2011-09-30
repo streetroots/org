@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Street Roots Core feature.
+ */
+
+include_once('sr_core.features.inc');
