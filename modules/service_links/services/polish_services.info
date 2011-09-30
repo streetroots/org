@@ -1,11 +1,8 @@
-name = Favorite Services
-description = Add the page in your favorite, work with Chrome, Firefox, IE, Opera
+name = Polish Services
+description = Provide the Polish Services: Blip, Wykop, Sledzik
 core = 7.x
 package = Service Links
 dependencies[] = service_links
-
-version = VERSION
-files[] = favorite_services.module
 
 ; Information added by drupal.org packaging script on 2011-09-19
 version = "7.x-2.x-dev"
