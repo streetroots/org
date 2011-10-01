@@ -478,6 +478,12 @@ function sr_core_context_default_contexts() {
           'region' => 'user_second',
           'weight' => '-10',
         ),
+        'boxes-mission' => array(
+          'module' => 'boxes',
+          'delta' => 'mission',
+          'region' => 'branding_second',
+          'weight' => '-26',
+        ),
         'boxes-donate_connect' => array(
           'module' => 'boxes',
           'delta' => 'donate_connect',
