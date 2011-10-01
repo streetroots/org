@@ -66,11 +66,11 @@ function sr_core_flag_default_flags() {
     'show_on_form' => 0,
     'access_author' => '',
     'i18n' => 0,
-    'api_version' => 2,
     'module' => 'sr_core',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 2,
   );
   // Exported flag: "Homepage sponsor".
   $flags['homepage_sponsor'] = array(
@@ -103,11 +103,11 @@ function sr_core_flag_default_flags() {
     'i18n' => 0,
     'flag_confirmation' => 'Are you sure you want to add this sponsor to the home page?',
     'unflag_confirmation' => 'Are you sure you want to remove this sponsor from the home page?',
-    'api_version' => 2,
     'module' => 'sr_core',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 2,
   );
   return $flags;
 }

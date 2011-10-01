@@ -477,6 +477,12 @@ function sr_core_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'search-form' => array(
+          'module' => 'search',
+          'delta' => 'form',
+          'region' => 'user_second',
+          'weight' => '-10',
+        ),
         'boxes-donate_connect' => array(
           'module' => 'boxes',
           'delta' => 'donate_connect',
