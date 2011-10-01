@@ -490,6 +490,12 @@ function sr_core_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-25',
         ),
+        'boxes-footer_data' => array(
+          'module' => 'boxes',
+          'delta' => 'footer_data',
+          'region' => 'footer_first',
+          'weight' => '-25',
+        ),
       ),
     ),
   );

@@ -80,6 +80,21 @@ function sr_core_default_box() {
   $box = new stdClass;
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
+  $box->delta = 'footer_data';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'Footer information';
+  $box->options = array(
+    'body' => array(
+      'value' => '<p>211 NW Davis St.&nbsp;<br />Portland, OR 97209-3922<br />503-228-5657</p>',
+      'format' => 'filtered_html',
+    ),
+  );
+  $export['footer_data'] = $box;
+
+  $box = new stdClass;
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
   $box->delta = 'mission';
   $box->plugin_key = 'simple';
   $box->title = 'Our Mission';
