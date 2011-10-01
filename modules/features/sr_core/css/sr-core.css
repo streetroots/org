@@ -2,7 +2,7 @@
 #sr-navigate {
   list-style: none;
   padding: 0;
-  width: 440px;
+  max-width: 440px;
 }
 #sr-navigate li {
   list-style: none;
