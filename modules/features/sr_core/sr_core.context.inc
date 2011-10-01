@@ -463,11 +463,6 @@ function sr_core_context_default_contexts() {
   $context->description = 'Sitewide blocks';
   $context->tag = 'sitewide';
   $context->conditions = array(
-    'path' => array(
-      'values' => array(
-        '~<front>' => '~<front>',
-      ),
-    ),
     'sitewide' => array(
       'values' => array(
         1 => 1,
