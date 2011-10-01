@@ -1,4 +1,5 @@
 core = "7.x"
+stylesheets[all][] = css/sr-core.css
 dependencies[] = "aggregator"
 dependencies[] = "block"
 dependencies[] = "boxes"

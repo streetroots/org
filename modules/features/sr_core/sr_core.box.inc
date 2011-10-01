@@ -415,7 +415,12 @@ function sr_core_default_box() {
   $box->description = 'Our Work sitewide menu block';
   $box->options = array(
     'body' => array(
-      'value' => '<p>full html with links to</p><p><a href="/about/vendor">Vendor Program</a></p><p><a href="/about/resourceguide">Resource Guide</a></p><p><a href="/about/newspaper">Newspaper</a></p><p><a href="/about/advocacy">Advocacy</a></p>',
+      'value' => '<ul id="sr-navigate">
+  <li><a class="sr-nav sr-nav-vendor" href="/about/vendor">Vendor Program</a></li>
+  <li><a class="sr-nav sr-nav-resource" href="/about/resourceguide">Resource Guide</a></li>
+  <li><a class="sr-nav sr-nav-newspaper" href="/about/newspaper">Newspaper</a></li>
+  <li><a class="sr-nav sr-nav-advocacy" href="/about/advocacy">Advocacy</a></li>
+</ul>',
       'format' => 'full_html',
     ),
   );
@@ -460,7 +465,12 @@ function sr_core_default_box() {
   $box->description = 'What We Do main homepage block';
   $box->options = array(
     'body' => array(
-      'value' => '<p>This will be a full html block with icons for</p><p><a href="about/vendor">Vendors</a> (top L)  <a href="about/resourceguide">Resource Guide</a> (top R)</p><p><a href="about/newspaper">Newspaper</a> (lower L) <a href="about/advocacy">Advocacy</a> (lower R)</p><p>these will link off to their appropriate pages.</p>',
+      'value' => '<ul id="sr-navigate">
+  <li><a class="sr-nav sr-nav-vendor" href="/about/vendor">Vendor Program</a></li>
+  <li><a class="sr-nav sr-nav-resource" href="/about/resourceguide">Resource Guide</a></li>
+  <li><a class="sr-nav sr-nav-newspaper" href="/about/newspaper">Newspaper</a></li>
+  <li><a class="sr-nav sr-nav-advocacy" href="/about/advocacy">Advocacy</a></li>
+</ul>',
       'format' => 'full_html',
     ),
   );
