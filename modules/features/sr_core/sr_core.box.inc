@@ -53,7 +53,7 @@ function sr_core_default_box() {
   $box->options = array(
     'body' => array(
       'value' => '<a class="button" href="https://org2.democracyinaction.org/o/5474/t/3276/shop/custom.jsp?donate_page_KEY=421">Donate</a><br />
-<ul class="follow">
+<ul class="follow clearfix">
   <li><a class="follow-fb" href="http://example.com">Join us on Facebook</a></li>
   <li><a class="follow-twitter" href="http://example.com">Follow us on Twitter</a></li>
   <li><a class="follow-youtube" href="http://example.com">Streetroots Youtube Channel</a></li>
