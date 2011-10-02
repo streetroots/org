@@ -63,7 +63,7 @@ function sr_core_default_box() {
   $box->api_version = 1;
   $box->delta = 'donate_connect';
   $box->plugin_key = 'simple';
-  $box->title = 'Donate Connect';
+  $box->title = 'Keep Us Strong';
   $box->description = 'Donate and Connect sitewide';
   $box->options = array(
     'body' => array(
@@ -74,6 +74,7 @@ function sr_core_default_box() {
 </p>',
       'format' => 'full_html',
     ),
+    'additional_classes' => '',
   );
   $export['donate_connect'] = $box;
 
