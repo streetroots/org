@@ -46,32 +46,21 @@ function sr_core_default_box() {
   $box = new stdClass;
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
-  $box->delta = 'box-c9035927';
-  $box->plugin_key = 'simple';
-  $box->title = 'Keep Us Strong';
-  $box->description = 'Keep Us Strong';
-  $box->options = array(
-    'body' => array(
-      'value' => '',
-      'format' => 'filtered_html',
-    ),
-  );
-  $export['box-c9035927'] = $box;
-
-  $box = new stdClass;
-  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
-  $box->api_version = 1;
   $box->delta = 'donate_connect';
   $box->plugin_key = 'simple';
   $box->title = 'Keep Us Strong';
   $box->description = 'Donate and Connect sitewide';
   $box->options = array(
     'body' => array(
-      'value' => '<p>sitewide donate/connect</p>
-<a href="https://org2.democracyinaction.org/o/5474/t/3276/shop/custom.jsp?donate_page_KEY=421">DONATE</a></p>
-<p>Keep in touch: 
-<a href="/newsletter">Sign up for our weekly newsletter</a>
-</p>',
+      'value' => '<a class="button" href="https://org2.democracyinaction.org/o/5474/t/3276/shop/custom.jsp?donate_page_KEY=421">Donate</a><br />
+<ul class="follow">
+  <li><a class="follow-fb" href="http://example.com">Join us on Facebook</a></li>
+  <li><a class="follow-twitter" href="http://example.com">Follow us on Twitter</a></li>
+  <li><a class="follow-youtube" href="http://example.com">Streetroots Youtube Channel</a></li>
+  <li><a class="follow-email" href="/contact">Contact Us</a></li>
+</ul>
+<h3>Sign up for our newsletter</h3>
+TODO',
       'format' => 'full_html',
     ),
     'additional_classes' => '',
