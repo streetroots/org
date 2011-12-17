@@ -14,7 +14,8 @@ function sr_core_user_default_permissions() {
   $permissions['create announcement content'] = array(
     'name' => 'create announcement content',
     'roles' => array(
-      0 => 'editor',
+      0 => 'administrator',
+      1 => 'editor',
     ),
     'module' => 'node',
   );
@@ -53,7 +54,8 @@ function sr_core_user_default_permissions() {
   $permissions['delete any announcement content'] = array(
     'name' => 'delete any announcement content',
     'roles' => array(
-      0 => 'editor',
+      0 => 'administrator',
+      1 => 'editor',
     ),
     'module' => 'node',
   );
@@ -92,7 +94,8 @@ function sr_core_user_default_permissions() {
   $permissions['delete own announcement content'] = array(
     'name' => 'delete own announcement content',
     'roles' => array(
-      0 => 'editor',
+      0 => 'administrator',
+      1 => 'editor',
     ),
     'module' => 'node',
   );
@@ -131,7 +134,8 @@ function sr_core_user_default_permissions() {
   $permissions['edit any announcement content'] = array(
     'name' => 'edit any announcement content',
     'roles' => array(
-      0 => 'editor',
+      0 => 'administrator',
+      1 => 'editor',
     ),
     'module' => 'node',
   );
@@ -170,7 +174,8 @@ function sr_core_user_default_permissions() {
   $permissions['edit own announcement content'] = array(
     'name' => 'edit own announcement content',
     'roles' => array(
-      0 => 'editor',
+      0 => 'administrator',
+      1 => 'editor',
     ),
     'module' => 'node',
   );
