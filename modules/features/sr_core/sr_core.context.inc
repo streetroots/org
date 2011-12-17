@@ -343,29 +343,35 @@ function sr_core_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'boxes-mission' => array(
-          'module' => 'boxes',
-          'delta' => 'mission',
+        'rotating_banner-6' => array(
+          'module' => 'rotating_banner',
+          'delta' => 6,
           'region' => 'content',
-          'weight' => '-10',
-        ),
-        'boxes-accountability' => array(
-          'module' => 'boxes',
-          'delta' => 'accountability',
-          'region' => 'content',
-          'weight' => '-10',
-        ),
-        'boxes-our_people' => array(
-          'module' => 'boxes',
-          'delta' => 'our_people',
-          'region' => 'content',
-          'weight' => '-10',
+          'weight' => '-41',
         ),
         'boxes-aboutourwork' => array(
           'module' => 'boxes',
           'delta' => 'aboutourwork',
           'region' => 'content',
-          'weight' => '-10',
+          'weight' => '-40',
+        ),
+        'boxes-mission' => array(
+          'module' => 'boxes',
+          'delta' => 'mission',
+          'region' => 'content',
+          'weight' => '-39',
+        ),
+        'boxes-our_people' => array(
+          'module' => 'boxes',
+          'delta' => 'our_people',
+          'region' => 'content',
+          'weight' => '-38',
+        ),
+        'boxes-accountability' => array(
+          'module' => 'boxes',
+          'delta' => 'accountability',
+          'region' => 'content',
+          'weight' => '-37',
         ),
         'aggregator-feed-1' => array(
           'module' => 'aggregator',
@@ -403,6 +409,12 @@ function sr_core_context_default_contexts() {
         'views-advocacy-block_1' => array(
           'module' => 'views',
           'delta' => 'advocacy-block_1',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+        'boxes-advocacy_by_type' => array(
+          'module' => 'boxes',
+          'delta' => 'advocacy_by_type',
           'region' => 'content',
           'weight' => '-10',
         ),

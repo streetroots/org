@@ -54,6 +54,21 @@ function sr_core_default_box() {
   $box = new stdClass;
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
+  $box->delta = 'advocacy_by_type';
+  $box->plugin_key = 'simple';
+  $box->title = 'Advocacy Campaigns Links';
+  $box->description = 'advocacy by type for advocacy program page';
+  $box->options = array(
+    'body' => array(
+      'value' => '<p>Housing</p><p>Health</p><p>Civil Rights</p>',
+      'format' => 'filtered_html',
+    ),
+  );
+  $export['advocacy_by_type'] = $box;
+
+  $box = new stdClass;
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
   $box->delta = 'box-c9035927';
   $box->plugin_key = 'simple';
   $box->title = 'Keep Us Strong';
