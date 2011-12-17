@@ -448,7 +448,7 @@ function sr_core_default_box() {
   $box->description = 'Our Work sitewide menu block';
   $box->options = array(
     'body' => array(
-      'value' => '<ul id="sr-navigate">
+      'value' => '<ul id="sr-navigate-side">
   <li><a class="sr-nav sr-nav-vendor" href="/about/vendor">Vendor Program</a></li>
   <li><a class="sr-nav sr-nav-resource" href="/about/resourceguide">Resource Guide</a></li>
   <li><a class="sr-nav sr-nav-newspaper" href="/about/newspaper">Newspaper</a></li>
@@ -499,7 +499,7 @@ function sr_core_default_box() {
   $box->description = 'What We Do main homepage block';
   $box->options = array(
     'body' => array(
-      'value' => '<ul id="sr-navigate">
+      'value' => '<ul id="sr-navigate" class="clearfix">
   <li><a class="sr-nav sr-nav-vendor" href="/about/vendor">Vendor Program</a></li>
   <li><a class="sr-nav sr-nav-resource" href="/about/resourceguide">Resource Guide</a></li>
   <li><a class="sr-nav sr-nav-newspaper" href="/about/newspaper">Newspaper</a></li>
