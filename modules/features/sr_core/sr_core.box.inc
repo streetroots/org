@@ -19,9 +19,14 @@ function sr_core_default_box() {
   $box->description = 'Our Work box for About page';
   $box->options = array(
     'body' => array(
-      'value' => '<p>Programs</p><p>History</p><p>Results</p>',
-      'format' => 'filtered_html',
+      'value' => '<p>
+<a href="/about/work#programs">Programs</a>
+<a href="/about/work#history">History</a>
+<a href="/about/work#results">Results</a>
+</p>',
+      'format' => 'full_html',
     ),
+    'additional_classes' => '',
   );
   $export['aboutourwork'] = $box;
 
@@ -34,14 +39,32 @@ function sr_core_default_box() {
   $box->description = 'Accountability box for About page';
   $box->options = array(
     'body' => array(
-      'value' => '<a href="about/accountability#accountability">Accountability</a>
+      'value' => '<p>
+<a href="about/accountability#affiliations">Affiliations</a>
 <a href="about/accountability#finances">Finances</a>
-<a href="about/accountability#Board Meeting Minutes">Board Meeting Minutes</a>
-<a href="about/accountability#annualreports">Annual Reports</a>',
+<a href="about/accountability#governance">Governance</a>
+<a href="about/accountability#annualreports">Annual Reports</a>
+</p>',
+      'format' => 'full_html',
+    ),
+    'additional_classes' => '',
+  );
+  $export['accountability'] = $box;
+
+  $box = new stdClass;
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'box-c9035927';
+  $box->plugin_key = 'simple';
+  $box->title = 'Keep Us Strong';
+  $box->description = 'Keep Us Strong';
+  $box->options = array(
+    'body' => array(
+      'value' => '',
       'format' => 'filtered_html',
     ),
   );
-  $export['accountability'] = $box;
+  $export['box-c9035927'] = $box;
 
   $box = new stdClass;
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
@@ -60,10 +83,15 @@ function sr_core_default_box() {
   <li><a class="follow-email" href="/contact">Contact Us</a></li>
 </ul>
 <h3>Sign up for our newsletter</h3>
-TODO',
+<form method="get" action="http://org2.democracyinaction.org/dia/api/process.jsp">
+<input type="hidden" name="table" value="supporter">
+<input type="hidden" name="organization_KEY" value="5474">
+<input type="hidden" name="redirect" value="newsletterthanks">
+Email Address: <input name="Email">
+<input type="Submit">
+</form>',
       'format' => 'full_html',
     ),
-    'additional_classes' => '',
   );
   $export['donate_connect'] = $box;
 
@@ -405,9 +433,14 @@ TODO',
   $box->description = 'Our People block for About page';
   $box->options = array(
     'body' => array(
-      'value' => '<p><a href="about/people">Staff, Community, and Board</a></p><p><a href="about/work/vendor/vendor-profile">Vendors</a></p><p>Volunteers</p><p><a href="support/sponsors">Supporters and Sponsors</a></p><p><a href="about/affiliations">Affiliations</a></p>',
+      'value' => '<p>
+<a href="/about/people">Staff, Board of Directors, and Volunteers</a>
+<a href="/about/work/vendor/vendor-profile">Vendors</a>
+<a href="/support/sponsors">Supporters and Sponsors</a>
+</p>',
       'format' => 'full_html',
     ),
+    'additional_classes' => '',
   );
   $export['our_people'] = $box;
 
@@ -440,7 +473,7 @@ TODO',
   $box->description = '2011 publication schedule';
   $box->options = array(
     'body' => array(
-      'value' => '<p>&nbsp;</p><div>2011 Publication Schedule</div><div>Deadlines are a week before the paper is released unless cleared with the editor in advance.</div><ul><li>Jan. 7<br />Deadline Dec. 31</li><li>Jan. 21<br />Deadline Jan. 14</li><li>Feb. 4<br />Deadline Jan. 28</li><li>Feb. 18<br />Deadline Feb. 11</li><li>March 4<br />Deadline Feb. 25</li><li>March 18<br />Deadline March 11</li><li>April 1<br />Deadline March 25</li><li>April 15<br />Deadline April 8</li><li>April 29<br />Deadline April 22</li><li>May 13<br />Deadline May 6</li><li>May 27<br />Deadline May 20</li><li>June 10<br />Deadline June 3</li><li>June 24<br />Deadline June 17</li><li>July 8<br />Deadline July 1</li><li>July 22<br />Deadline July 15</li><li>Aug. 5<br />Deadline July 29</li><li>Aug. 19<br />Deadline Aug. 12</li><li>Sept. 2<br />Deadline Aug. 26</li><li>Sept. 16<br />Deadline Sept. 9</li><li>Sept. 30<br />Deadline Sept. 23</li><li>Oct. 14<br />Deadline Oct. 7</li><li>Oct. 28<br />Deadline Oct. 21</li><li>Nov. 11<br />Deadline Nov. 4</li><li>Nov. 25<br />Deadline Nov. 16*</li><li>Dec. 9<br />Deadline Dec. 2</li><li>Dec. 23<br />Deadline Dec. 14*&nbsp;</li></ul><div>Submissions are best received by e-mail at streetrootsnews@gmail.com</div><div>Or &nbsp;you can send them by fax: 503-227-3117.</div><div>Or to our office at 211 NW Davis St. Portland, OR 97206</div><div>Questions? Please call Joanne Zuhl at 503-228-5657,</div><div>or write to streetrootsnews@gmail.com</div><div>&nbsp;</div><div>* Early deadlines for holiday printing schedule</div>',
+      'value' => '<p>2011 Publication Schedule</p><div>Deadlines are a week before the paper is released unless cleared with the editor in advance.</div><ul><li>Jan. 7<br />Deadline Dec. 31</li><li>Jan. 21<br />Deadline Jan. 14</li><li>Feb. 4<br />Deadline Jan. 28</li><li>Feb. 18<br />Deadline Feb. 11</li><li>March 4<br />Deadline Feb. 25</li><li>March 18<br />Deadline March 11</li><li>April 1<br />Deadline March 25</li><li>April 15<br />Deadline April 8</li><li>April 29<br />Deadline April 22</li><li>May 13<br />Deadline May 6</li><li>May 27<br />Deadline May 20</li><li>June 10<br />Deadline June 3</li><li>June 24<br />Deadline June 17</li><li>July 8<br />Deadline July 1</li><li>July 22<br />Deadline July 15</li><li>Aug. 5<br />Deadline July 29</li><li>Aug. 19<br />Deadline Aug. 12</li><li>Sept. 2<br />Deadline Aug. 26</li><li>Sept. 16<br />Deadline Sept. 9</li><li>Sept. 30<br />Deadline Sept. 23</li><li>Oct. 14<br />Deadline Oct. 7</li><li>Oct. 28<br />Deadline Oct. 21</li><li>Nov. 11<br />Deadline Nov. 4</li><li>Nov. 25<br />Deadline Nov. 16*</li><li>Dec. 9<br />Deadline Dec. 2</li><li>Dec. 23<br />Deadline Dec. 14*&nbsp;</li></ul><div>Submissions are best received by e-mail at joanne@streetroots.org</div><div>Or &nbsp;you can send them by fax: 503-227-3117.</div><div>Or to our office at 211 NW Davis St. Portland, OR 97206</div><div>Questions? Please call Joanne Zuhl at 503-228-5657,</div><div>or write to joanne@streetroots.org</div><div>&nbsp;</div><div>* Early deadlines for holiday printing schedule</div>',
       'format' => 'filtered_html',
     ),
   );
