@@ -106,6 +106,7 @@ function sr_core_field_default_fields() {
         ),
         'enable_tokens' => 1,
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
       ),
@@ -148,6 +149,7 @@ function sr_core_field_default_fields() {
         ),
         'enable_tokens' => 1,
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
         'user_register_form' => FALSE,
@@ -716,7 +718,7 @@ function sr_core_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 0,
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -785,14 +787,14 @@ function sr_core_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => 1,
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1202,7 +1204,7 @@ function sr_core_field_default_fields() {
           'module' => 'galleryformatter',
           'settings' => array(
             'link_to_full' => 1,
-            'link_to_full_style' => 0,
+            'link_to_full_style' => 'vendor_photo_gallery',
             'modal' => 'none',
             'slide_style' => 'galleryformatter_slide',
             'style' => 'Greenarrows',
@@ -1397,6 +1399,74 @@ function sr_core_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-profile-field_profile_contact'
+  $fields['node-profile-field_profile_contact'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_profile_contact',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '60',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'profile',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Please enter the e-mail address for the person you\'re creating the profile for.',
+      'display' => array(
+        'default' => array(
+          'label' => 'inline',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '6',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_profile_contact',
+      'label' => 'Contact',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '6',
+      ),
+    ),
+  );
+
   // Exported field: 'node-profile-field_profile_internal_notes'
   $fields['node-profile-field_profile_internal_notes'] = array(
     'field_config' => array(
@@ -1457,7 +1527,7 @@ function sr_core_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '6',
+        'weight' => '7',
       ),
     ),
   );
@@ -1484,6 +1554,7 @@ function sr_core_field_default_fields() {
         ),
         'enable_tokens' => 1,
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
       ),
@@ -1525,6 +1596,7 @@ function sr_core_field_default_fields() {
         ),
         'enable_tokens' => 1,
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 'optional',
         'user_register_form' => FALSE,
@@ -1563,7 +1635,7 @@ function sr_core_field_default_fields() {
       ),
       'module' => 'image',
       'settings' => array(
-        'default_image' => 0,
+        'default_image' => '65',
         'uri_scheme' => 'public',
       ),
       'translatable' => '1',
@@ -1616,6 +1688,8 @@ function sr_core_field_default_fields() {
             'auto' => 0,
             'image' => 0,
             'image_gallery' => 0,
+            'image_galleryformatter_slide' => 0,
+            'image_galleryformatter_thumb' => 0,
             'image_large' => 0,
             'image_medium' => 0,
             'image_sponsor_logo' => 0,
@@ -1741,7 +1815,7 @@ function sr_core_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
@@ -2090,6 +2164,7 @@ function sr_core_field_default_fields() {
         ),
         'enable_tokens' => 1,
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
       ),
@@ -2131,6 +2206,7 @@ function sr_core_field_default_fields() {
         ),
         'enable_tokens' => 1,
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 'optional',
         'user_register_form' => FALSE,
@@ -2185,7 +2261,7 @@ function sr_core_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -2252,14 +2328,14 @@ function sr_core_field_default_fields() {
       'bundle' => 'testimonial',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'Please enter the name of the person who gave the testimonial.',
+      'description' => 'Please enter the name, title, and organization of the person who gave the testimonial. Example: Rooty, Office Cat, Street Roots',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 1,
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2270,7 +2346,7 @@ function sr_core_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_testimonial_name',
-      'label' => 'Name',
+      'label' => 'Name, title, and organization',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
@@ -2280,7 +2356,7 @@ function sr_core_field_default_fields() {
         'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'size' => '60',
+          'size' => '100',
         ),
         'type' => 'text_textfield',
         'weight' => '2',
@@ -2328,11 +2404,11 @@ function sr_core_field_default_fields() {
       'description' => 'What kind of testimonial is this? Please select the type that best describes the author. This will help the testimonial show up on the correct pages.',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 2,
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2344,7 +2420,7 @@ function sr_core_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_testimonial_type',
       'label' => 'Testimonial type',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
@@ -2426,7 +2502,7 @@ function sr_core_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '2',
+        'weight' => '3',
       ),
       'widget_type' => 'text_textarea_with_summary',
     ),
@@ -2495,7 +2571,7 @@ function sr_core_field_default_fields() {
           'size' => '75',
         ),
         'type' => 'text_textfield',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
@@ -2592,6 +2668,74 @@ function sr_core_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-vendor_profile-field_vendor_profile_published'
+  $fields['node-vendor_profile-field_vendor_profile_published'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_vendor_profile_published',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '10',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'vendor_profile',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Format YYYY-MM-DD (example: 2012-01-27). This allows sorting by date.',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '3',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_vendor_profile_published',
+      'label' => 'Date Vendor Profile published in paper (format YYYY-MM-DD)',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '10',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '2',
+      ),
+    ),
+  );
+
   // Exported field: 'node-volunteer_job_description-body'
   $fields['node-volunteer_job_description-body'] = array(
     'field_config' => array(
@@ -2660,9 +2804,96 @@ function sr_core_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '-4',
+        'weight' => '4',
       ),
       'widget_type' => 'text_textarea_with_summary',
+    ),
+  );
+
+  // Exported field: 'node-volunteer_job_description-field_volop_apply'
+  $fields['node-volunteer_job_description-field_volop_apply'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_volop_apply',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'module' => 'link',
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'rel' => '',
+          'target' => 'default',
+        ),
+        'display' => array(
+          'url_cutoff' => 80,
+        ),
+        'enable_tokens' => 1,
+        'title' => 'optional',
+        'title_maxlength' => 128,
+        'title_value' => '',
+        'url' => 0,
+      ),
+      'translatable' => '0',
+      'type' => 'link_field',
+    ),
+    'field_instance' => array(
+      'bundle' => 'volunteer_job_description',
+      'default_value' => array(
+        0 => array(
+          'title' => 'Submit a volunteer application online',
+          'url' => 'node/1',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'link_default',
+          'weight' => 4,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_volop_apply',
+      'label' => 'Volunteer Application',
+      'required' => 0,
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'configurable_title' => 0,
+          'rel' => 'nofollow',
+          'target' => 'default',
+          'title' => '',
+        ),
+        'display' => array(
+          'url_cutoff' => '80',
+        ),
+        'enable_tokens' => 1,
+        'title' => 'value',
+        'title_maxlength' => 128,
+        'title_value' => 'Submit a volunteer application online',
+        'url' => 0,
+        'user_register_form' => FALSE,
+        'validate_url' => 1,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_field',
+        'weight' => '6',
+      ),
     ),
   );
 
@@ -2728,7 +2959,7 @@ function sr_core_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'text_textfield',
-        'weight' => '-1',
+        'weight' => '1',
       ),
     ),
   );
@@ -2786,17 +3017,17 @@ function sr_core_field_default_fields() {
       'label' => 'Hours',
       'required' => 0,
       'settings' => array(
-        'text_processing' => '1',
+        'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'size' => '75',
+          'size' => '250',
         ),
         'type' => 'text_textfield',
-        'weight' => '-2',
+        'weight' => '2',
       ),
     ),
   );
@@ -2952,9 +3183,12 @@ function sr_core_field_default_fields() {
   t('Campaign Type');
   t('Checking Yes will make this sponsor show up on the Resource Guide page. Please only check Yes if this sponsor is a Resource Guide sponsor.');
   t('Commitment');
+  t('Contact');
+  t('Date Vendor Profile published in paper (format YYYY-MM-DD)');
   t('Description of volunteer opportunity');
   t('Enter updates related to this advocacy campaign');
   t('Files');
+  t('Format YYYY-MM-DD (example: 2012-01-27). This allows sorting by date.');
   t('Hours');
   t('If this opportunity has scheduled times, hours, or dates, please enter it here.');
   t('Internal notes');
@@ -2962,7 +3196,7 @@ function sr_core_field_default_fields() {
   t('Is this photo gallery a Vendor Photo Gallery?');
   t('Link to the Advocacy Campaign Take Action Now page from Democracy in Action');
   t('Location');
-  t('Name');
+  t('Name, title, and organization');
   t('Notes');
   t('Organization and Website');
   t('Page File');
@@ -2972,8 +3206,9 @@ function sr_core_field_default_fields() {
   t('Photos');
   t('Please choose the level for the sponsor based on the value of the sponsorship.');
   t('Please enter information about any partners standing with Street Roots in this advocacy campaign');
+  t('Please enter the e-mail address for the person you\'re creating the profile for.');
   t('Please enter the name of the Sponsor in Title and the URL of their website in URL. It is important to copy and paste the URL (rather than typing it in) to prevent broken links. URL must begin with <code>http://</code> (which will happen if it\'s copied and pasted).');
-  t('Please enter the name of the person who gave the testimonial.');
+  t('Please enter the name, title, and organization of the person who gave the testimonial. Example: Rooty, Office Cat, Street Roots');
   t('Please enter the person\'s organization (in Title) and their website (in URL), if they have one. Note: it\'s important to copy and paste the URL from the opened website to eliminate broken links. <strong>External URLs should begin with <code>http://</code>.</strong>');
   t('Please enter the position of the person you are creating a profile for.');
   t('Please enter the statement for this advocacy campaign.');
@@ -3003,6 +3238,7 @@ function sr_core_field_default_fields() {
   t('Vendor Gallery?');
   t('Vendor Photo');
   t('Vendor profile text');
+  t('Volunteer Application');
   t('Ways to Get Involved');
   t('What kind of testimonial is this? Please select the type that best describes the author. This will help the testimonial show up on the correct pages.');
   t('Where does this volunteer opportunity take place? i.e., at Street Roots, in the field, remote, etc.');

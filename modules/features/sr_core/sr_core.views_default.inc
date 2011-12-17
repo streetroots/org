@@ -17,12 +17,12 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'advocacy';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'advocacy';
+  $handler->display->display_options['title'] = 'Advocacy Campaigns';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -134,7 +134,7 @@ function sr_core_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block_1');
   $translatables['advocacy'] = array(
     t('Master'),
-    t('advocacy'),
+    t('Advocacy Campaigns'),
     t('more'),
     t('Apply'),
     t('Reset'),
@@ -157,7 +157,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'aggregator_item';
   $view->human_name = 'blogroll_wp';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Defaults */
@@ -243,7 +243,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'community partners';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Defaults */
@@ -333,7 +333,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'Community Testimonials';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Defaults */
@@ -377,7 +377,7 @@ function sr_core_views_default_views() {
   $handler->display->display_options['fields']['entity_id']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['entity_id']['hide_empty'] = 1;
   $handler->display->display_options['fields']['entity_id']['empty_zero'] = 0;
-  /* Field: Content: Name */
+  /* Field: Content: Name, title, and organization */
   $handler->display->display_options['fields']['entity_id_1']['id'] = 'entity_id_1';
   $handler->display->display_options['fields']['entity_id_1']['table'] = 'field_data_field_testimonial_name';
   $handler->display->display_options['fields']['entity_id_1']['field'] = 'field_testimonial_name';
@@ -468,7 +468,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'foundation_sponsors';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Defaults */
@@ -558,7 +558,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'gallery';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Defaults */
@@ -674,7 +674,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'homepage_announcement';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Defaults */
@@ -829,7 +829,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'homepage_sponsors';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Defaults */
@@ -915,7 +915,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'levelfive_sponsors';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Defaults */
@@ -1005,7 +1005,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'levelfour_sponsors';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Defaults */
@@ -1095,7 +1095,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'levelone_sponsors';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Defaults */
@@ -1185,7 +1185,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'levelthree_sponsors';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Defaults */
@@ -1275,7 +1275,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'leveltwo_sponsors';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Defaults */
@@ -1365,7 +1365,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = '';
   $view->core = 0;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Defaults */
@@ -1413,7 +1413,7 @@ function sr_core_views_default_views() {
   $handler->display->display_options['fields']['body']['hide_empty'] = 0;
   $handler->display->display_options['fields']['body']['empty_zero'] = 0;
   $handler->display->display_options['fields']['body']['field_api_classes'] = 0;
-  /* Field: Content: Name */
+  /* Field: Content: Name, title, and organization */
   $handler->display->display_options['fields']['field_testimonial_name']['id'] = 'field_testimonial_name';
   $handler->display->display_options['fields']['field_testimonial_name']['table'] = 'field_data_field_testimonial_name';
   $handler->display->display_options['fields']['field_testimonial_name']['field'] = 'field_testimonial_name';
@@ -1482,7 +1482,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'Our People';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Defaults */
@@ -1504,24 +1504,10 @@ function sr_core_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['separator'] = ' ';
   $handler->display->display_options['row_options']['hide_empty'] = 1;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = 1;
-  $handler->display->display_options['fields']['title']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
   /* Field: Content: Photo */
   $handler->display->display_options['fields']['entity_id']['id'] = 'entity_id';
   $handler->display->display_options['fields']['entity_id']['table'] = 'field_data_field_profile_photo';
@@ -1544,6 +1530,24 @@ function sr_core_views_default_views() {
     'image_style' => 'square_thumbnail',
     'image_link' => 'content',
   );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
   /* Field: Content: Position */
   $handler->display->display_options['fields']['entity_id_1']['id'] = 'entity_id_1';
   $handler->display->display_options['fields']['entity_id_1']['table'] = 'field_data_field_profile_position';
@@ -1561,29 +1565,11 @@ function sr_core_views_default_views() {
   $handler->display->display_options['fields']['entity_id_1']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['entity_id_1']['hide_empty'] = 1;
   $handler->display->display_options['fields']['entity_id_1']['empty_zero'] = 0;
-  /* Field: Content: Organization and Website */
-  $handler->display->display_options['fields']['entity_id_2']['id'] = 'entity_id_2';
-  $handler->display->display_options['fields']['entity_id_2']['table'] = 'field_data_field_profile_org_website';
-  $handler->display->display_options['fields']['entity_id_2']['field'] = 'field_profile_org_website';
-  $handler->display->display_options['fields']['entity_id_2']['label'] = '';
-  $handler->display->display_options['fields']['entity_id_2']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['entity_id_2']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['entity_id_2']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['entity_id_2']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['entity_id_2']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['entity_id_2']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['entity_id_2']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['entity_id_2']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['entity_id_2']['element_label_colon'] = 0;
-  $handler->display->display_options['fields']['entity_id_2']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['entity_id_2']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['entity_id_2']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['entity_id_2']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['entity_id_2']['type'] = 'default';
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['relationship'] = 'term_node_tid';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['alter_text'] = 0;
@@ -1599,6 +1585,33 @@ function sr_core_views_default_views() {
   $handler->display->display_options['fields']['name']['hide_empty'] = 1;
   $handler->display->display_options['fields']['name']['empty_zero'] = 0;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = 1;
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['edit_node']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['edit_node']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['edit_node']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['edit_node']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['edit_node']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['edit_node']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['edit_node']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['edit_node']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['edit_node']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['edit_node']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['edit_node']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['edit_node']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['edit_node']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['edit_node']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['edit_node']['hide_alter_empty'] = 0;
+  /* Sort criterion: Content: Sticky */
+  $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['table'] = 'node';
+  $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['order'] = 'DESC';
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
@@ -1629,6 +1642,7 @@ function sr_core_views_default_views() {
     t('Items per page'),
     t('- All -'),
     t('Offset'),
+    t('term'),
     t('Page'),
   );
   $export['our_people'] = $view;
@@ -1640,7 +1654,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'Testimonials';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Defaults */
@@ -1678,7 +1692,7 @@ function sr_core_views_default_views() {
   $handler->display->display_options['fields']['entity_id']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['entity_id']['hide_empty'] = 1;
   $handler->display->display_options['fields']['entity_id']['empty_zero'] = 0;
-  /* Field: Content: Name */
+  /* Field: Content: Name, title, and organization */
   $handler->display->display_options['fields']['entity_id_1']['id'] = 'entity_id_1';
   $handler->display->display_options['fields']['entity_id_1']['table'] = 'field_data_field_testimonial_name';
   $handler->display->display_options['fields']['entity_id_1']['field'] = 'field_testimonial_name';
@@ -1747,7 +1761,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'Vendor Photo Gallery';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
@@ -1894,7 +1908,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'Vendor Profile';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
@@ -1917,22 +1931,6 @@ function sr_core_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['links'] = 1;
   $handler->display->display_options['row_options']['comments'] = 0;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
   /* Field: Content: Vendor Photo */
   $handler->display->display_options['fields']['field_vendor_photo']['id'] = 'field_vendor_photo';
   $handler->display->display_options['fields']['field_vendor_photo']['table'] = 'field_data_field_vendor_photo';
@@ -1959,6 +1957,22 @@ function sr_core_views_default_views() {
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_vendor_photo']['field_api_classes'] = 0;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -1969,18 +1983,19 @@ function sr_core_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['absolute'] = 0;
   $handler->display->display_options['fields']['body']['alter']['external'] = 0;
   $handler->display->display_options['fields']['body']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['trim_whitespace'] = 0;
   $handler->display->display_options['fields']['body']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['max_length'] = '250';
   $handler->display->display_options['fields']['body']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['body']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['body']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['trim'] = 1;
+  $handler->display->display_options['fields']['body']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['body']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['body']['element_label_colon'] = 0;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['body']['hide_empty'] = 0;
   $handler->display->display_options['fields']['body']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['hide_alter_empty'] = 0;
+  $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '200',
   );
@@ -2008,14 +2023,13 @@ function sr_core_views_default_views() {
   $handler->display->display_options['title'] = 'Vendor Profiles';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['grouping'] = 'title';
-  $handler->display->display_options['style_options']['columns'] = '3';
+  $handler->display->display_options['style_options']['columns'] = '2';
   $handler->display->display_options['style_options']['fill_single_line'] = 1;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'node';
-  $handler->display->display_options['row_options']['links'] = 1;
-  $handler->display->display_options['row_options']['comments'] = 0;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = 1;
+  $handler->display->display_options['row_options']['default_field_elements'] = 1;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['path'] = 'about/vendor/vendor-profile';
 
@@ -2063,7 +2077,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'Vendor Testimonials';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Defaults */
@@ -2101,7 +2115,7 @@ function sr_core_views_default_views() {
   $handler->display->display_options['fields']['entity_id']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['entity_id']['hide_empty'] = 1;
   $handler->display->display_options['fields']['entity_id']['empty_zero'] = 0;
-  /* Field: Content: Name */
+  /* Field: Content: Name, title, and organization */
   $handler->display->display_options['fields']['entity_id_1']['id'] = 'entity_id_1';
   $handler->display->display_options['fields']['entity_id_1']['table'] = 'field_data_field_testimonial_name';
   $handler->display->display_options['fields']['entity_id_1']['field'] = 'field_testimonial_name';
@@ -2185,7 +2199,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'Volunteer Opportunities';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Defaults */
@@ -2260,7 +2274,7 @@ function sr_core_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'Volunteer Testimonials';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Defaults */
@@ -2303,7 +2317,7 @@ function sr_core_views_default_views() {
   $handler->display->display_options['fields']['entity_id']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['entity_id']['hide_empty'] = 1;
   $handler->display->display_options['fields']['entity_id']['empty_zero'] = 0;
-  /* Field: Content: Name */
+  /* Field: Content: Name, title, and organization */
   $handler->display->display_options['fields']['entity_id_1']['id'] = 'entity_id_1';
   $handler->display->display_options['fields']['entity_id_1']['table'] = 'field_data_field_testimonial_name';
   $handler->display->display_options['fields']['entity_id_1']['field'] = 'field_testimonial_name';
