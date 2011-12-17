@@ -83,12 +83,7 @@ function sr_core_default_box() {
   <li><a class="follow-email" href="/contact">Contact Us</a></li>
 </ul>
 <h3>Sign up for our newsletter</h3>
-<form method="get" action="http://org2.democracyinaction.org/dia/api/process.jsp">
-<input type="hidden" name="table" value="supporter">
-<input type="hidden" name="organization_KEY" value="5474">
-<input type="hidden" name="redirect" value="newsletterthanks">
-Email Address: <input name="Email">
-<input type="Submit">
+<form method="get" action="http://org2.democracyinaction.org/dia/api/process.jsp"><input type="hidden" name="table" value="supporter"><input type="hidden" name="organization_KEY" value="5474"><input type="hidden" name="redirect" value="newsletterthanks"><input name="Email" placeholder="Email Address"><input type="Submit" value="Subscribe" class="button">
 </form>',
       'format' => 'full_html',
     ),
