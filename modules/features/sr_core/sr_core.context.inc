@@ -343,29 +343,35 @@ function sr_core_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'boxes-our_people' => array(
-          'module' => 'boxes',
-          'delta' => 'our_people',
-          'region' => 'triptych_first',
-          'weight' => '-10',
-        ),
-        'boxes-aboutourwork' => array(
-          'module' => 'boxes',
-          'delta' => 'aboutourwork',
-          'region' => 'triptych_first',
-          'weight' => '-9',
-        ),
         'boxes-mission' => array(
           'module' => 'boxes',
           'delta' => 'mission',
-          'region' => 'triptych_middle',
+          'region' => 'content',
           'weight' => '-10',
         ),
         'boxes-accountability' => array(
           'module' => 'boxes',
           'delta' => 'accountability',
-          'region' => 'triptych_middle',
-          'weight' => '-9',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+        'boxes-our_people' => array(
+          'module' => 'boxes',
+          'delta' => 'our_people',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+        'boxes-aboutourwork' => array(
+          'module' => 'boxes',
+          'delta' => 'aboutourwork',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+        'aggregator-feed-1' => array(
+          'module' => 'aggregator',
+          'delta' => 'feed-1',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
         ),
       ),
     ),
@@ -463,6 +469,11 @@ function sr_core_context_default_contexts() {
   $context->description = 'Sitewide blocks';
   $context->tag = 'sitewide';
   $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        '~<front>' => '~<front>',
+      ),
+    ),
     'sitewide' => array(
       'values' => array(
         1 => 1,
@@ -472,6 +483,12 @@ function sr_core_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-cbd20254f5b49a9e534199b96f449616' => array(
+          'module' => 'views',
+          'delta' => 'cbd20254f5b49a9e534199b96f449616',
+          'region' => 'content',
+          'weight' => '9',
+        ),
         'search-form' => array(
           'module' => 'search',
           'delta' => 'form',
@@ -495,6 +512,18 @@ function sr_core_context_default_contexts() {
           'delta' => 'ourwork_menu',
           'region' => 'sidebar_second',
           'weight' => '-25',
+        ),
+        'system-management' => array(
+          'module' => 'system',
+          'delta' => 'management',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+        'system-user-menu' => array(
+          'module' => 'system',
+          'delta' => 'user-menu',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
         ),
         'boxes-footer_data' => array(
           'module' => 'boxes',
