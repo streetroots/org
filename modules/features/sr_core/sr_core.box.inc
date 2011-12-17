@@ -483,9 +483,10 @@ function sr_core_default_box() {
   $box->description = 'friends and supporters link box';
   $box->options = array(
     'body' => array(
-      'value' => '<h2><a href="support/sponsors">Click here to see all of our friends, supporters, and sponsors</a></h2>',
+      'value' => '<h2><a href="support/sponsors">See our friends, supporters, and sponsors</a></h2>',
       'format' => 'full_html',
     ),
+    'additional_classes' => '',
   );
   $export['see_our_friends_and_supporters'] = $box;
 
