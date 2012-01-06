@@ -5,3 +5,23 @@
  */
 
 include_once('sr_core.features.inc');
+
+/**
+ * Implements hook_menu().
+ */
+function sr_core_menu() {
+  // Adds an empty 'welcome' callback to build the front page around.
+  $items['welcome'] = array(
+    'title' => '',
+    'page callback' => 'sr_core_front_page',
+    'access arguments' => array('access content'),
+  );
+  return $items;
+}
+
+/**
+ * Return an empty string for the front page.
+ */
+function sr_core_front_page() {
+  return '';
+}

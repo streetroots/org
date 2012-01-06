@@ -1236,5 +1236,12 @@ function sr_core_strongarm() {
   $strongarm->value = 'Save and add fields';
   $export['save_continue_volunteer_job_description'] = $strongarm;
 
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_frontpage';
+  $strongarm->value = 'welcome';
+  $export['site_frontpage'] = $strongarm;
+
   return $export;
 }
