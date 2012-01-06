@@ -806,30 +806,43 @@ function sr_core_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_announcement_image',
       'label' => 'Announcement Image',
-      'required' => FALSE,
+      'required' => 0,
       'settings' => array(
-        'alt_field' => 0,
+        'alt_field' => 1,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
         'max_resolution' => '',
-        'min_resolution' => '',
-        'title_field' => 0,
+        'min_resolution' => '400x400',
+        'title_field' => 1,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
+        'active' => 1,
         'module' => 'image',
         'settings' => array(
           'insert' => 0,
           'insert_class' => '',
-          'insert_default' => array(
-            0 => 'auto',
-          ),
+          'insert_default' => 'auto',
           'insert_styles' => array(
-            0 => 'auto',
+            'auto' => 'auto',
+            'image' => 0,
+            'image_320wide' => 0,
+            'image_gallery' => 0,
+            'image_galleryformatter_slide' => 0,
+            'image_galleryformatter_thumb' => 0,
+            'image_large' => 0,
+            'image_medium' => 0,
+            'image_sponsor_logo' => 0,
+            'image_square_thumbnail' => 0,
+            'image_third' => 0,
+            'image_thumbnail' => 0,
+            'image_twothirds' => 0,
+            'image_vendor_photo_gallery' => 0,
+            'link' => 0,
           ),
           'insert_width' => '',
-          'preview_image_style' => 'thumbnail',
+          'preview_image_style' => 'third',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
@@ -1052,13 +1065,13 @@ function sr_core_field_default_fields() {
       'label' => 'Page Image',
       'required' => 0,
       'settings' => array(
-        'alt_field' => 0,
+        'alt_field' => 1,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
         'max_resolution' => '',
-        'min_resolution' => '',
-        'title_field' => 0,
+        'min_resolution' => '400x400',
+        'title_field' => 1,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -1079,12 +1092,14 @@ function sr_core_field_default_fields() {
             'image_medium' => 0,
             'image_sponsor_logo' => 0,
             'image_square_thumbnail' => 0,
+            'image_third' => 0,
             'image_thumbnail' => 0,
+            'image_twothirds' => 0,
             'image_vendor_photo_gallery' => 0,
             'link' => 0,
           ),
           'insert_width' => '',
-          'preview_image_style' => 'thumbnail',
+          'preview_image_style' => 'third',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
@@ -2368,76 +2383,6 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-testimonial-field_testimonial_type'
-  $fields['node-testimonial-field_testimonial_type'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_testimonial_type',
-      'foreign keys' => array(
-        'tid' => array(
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
-      'module' => 'taxonomy',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'testimonial',
-            'parent' => '0',
-          ),
-        ),
-      ),
-      'translatable' => '1',
-      'type' => 'taxonomy_term_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'testimonial',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => 'What kind of testimonial is this? Please select the type that best describes the author. This will help the testimonial show up on the correct pages.',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'taxonomy',
-          'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '2',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_testimonial_type',
-      'label' => 'Testimonial type',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_buttons',
-        'weight' => '1',
-      ),
-    ),
-  );
-
   // Exported field: 'node-vendor_profile-body'
   $fields['node-vendor_profile-body'] = array(
     'field_config' => array(
@@ -3234,7 +3179,6 @@ function sr_core_field_default_fields() {
   t('Sponsor website');
   t('Statement');
   t('Take action now!');
-  t('Testimonial type');
   t('This is a place to record internal notes about people/their profiles (i.e., board term expires on YY/MM/DD or other data). This is only viewable by Street Roots staff with appropriate permissions when logged in to the site.');
   t('This is the place to enter a short testimonial. It will show up on various parts of the website depending on who it is from.');
   t('Updates');
@@ -3244,7 +3188,6 @@ function sr_core_field_default_fields() {
   t('Vendor profile text');
   t('Volunteer Application');
   t('Ways to Get Involved');
-  t('What kind of testimonial is this? Please select the type that best describes the author. This will help the testimonial show up on the correct pages.');
   t('Where does this volunteer opportunity take place? i.e., at Street Roots, in the field, remote, etc.');
 
   return $fields;

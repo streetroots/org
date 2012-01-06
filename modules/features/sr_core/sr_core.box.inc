@@ -108,13 +108,28 @@ function sr_core_default_box() {
   $box = new stdClass;
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
+  $box->delta = 'footer_credits';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'footer site credits';
+  $box->options = array(
+    'body' => array(
+      'value' => 'streetroots.org is a <a href="http://drupal.org/">Drupal 7</a> website built by <a href="http://drupal.org/user/400240">skjalf</a>, designed by <a href="http://andreacouch.com/">Andrea Couch</a>, and themed by <a href="http://drupal.org/user/208732">jhedstrom</a>.',
+      'format' => 'full_html',
+    ),
+  );
+  $export['footer_credits'] = $box;
+
+  $box = new stdClass;
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
   $box->delta = 'footer_data';
   $box->plugin_key = 'simple';
   $box->title = '';
   $box->description = 'Footer information';
   $box->options = array(
     'body' => array(
-      'value' => '<p>211 NW Davis St.&nbsp;<br />Portland, OR 97209-3922<br />503-228-5657</p>',
+      'value' => '<p><strong>Street Roots</strong><br />211 NW Davis St.&nbsp;<br />Portland, OR 97209-3922<br />503-228-5657</p><p>Copyright 1998-2011 Street Roots. All rights reserved.</p>',
       'format' => 'filtered_html',
     ),
   );
