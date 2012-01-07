@@ -114,9 +114,10 @@ function sr_core_default_box() {
   $box->description = 'footer site credits';
   $box->options = array(
     'body' => array(
-      'value' => 'streetroots.org is a <a href="http://drupal.org/">Drupal 7</a> website built by <a href="http://drupal.org/user/400240">skjalf</a>, designed by <a href="http://andreacouch.com/">Andrea Couch</a>, and themed by <a href="http://drupal.org/user/208732">jhedstrom</a>.',
+      'value' => '<a href="/user">staff login</a>',
       'format' => 'full_html',
     ),
+    'additional_classes' => '',
   );
   $export['footer_credits'] = $box;
 
@@ -513,7 +514,7 @@ function sr_core_default_box() {
   $box->description = 'friends and supporters link box';
   $box->options = array(
     'body' => array(
-      'value' => '<h2><a href="support/sponsors">See our friends, supporters, and sponsors</a></h2>',
+      'value' => '<h2><span><a href="support/sponsors">See our friends, supporters, and sponsors</a></span></h2>',
       'format' => 'full_html',
     ),
     'additional_classes' => '',

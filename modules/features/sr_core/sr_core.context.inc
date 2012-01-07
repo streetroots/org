@@ -525,12 +525,6 @@ function sr_core_context_default_contexts() {
           'region' => 'branding_second',
           'weight' => '-26',
         ),
-        'delta_blocks-breadcrumb' => array(
-          'module' => 'delta_blocks',
-          'delta' => 'breadcrumb',
-          'region' => 'menu',
-          'weight' => '1',
-        ),
         'boxes-donate_connect' => array(
           'module' => 'boxes',
           'delta' => 'donate_connect',
