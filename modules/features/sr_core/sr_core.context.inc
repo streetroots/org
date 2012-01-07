@@ -13,75 +13,6 @@ function sr_core_context_default_contexts() {
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'Home';
-  $context->description = 'homepage';
-  $context->tag = 'home';
-  $context->conditions = array(
-    'path' => array(
-      'values' => array(
-        '<front>' => '<front>',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'rotating_banner-1' => array(
-          'module' => 'rotating_banner',
-          'delta' => 1,
-          'region' => 'content',
-          'weight' => '-21',
-        ),
-        'boxes-whatwedo' => array(
-          'module' => 'boxes',
-          'delta' => 'whatwedo',
-          'region' => 'content',
-          'weight' => '-10',
-        ),
-        'aggregator-feed-1' => array(
-          'module' => 'aggregator',
-          'delta' => 'feed-1',
-          'region' => 'content',
-          'weight' => '-9',
-        ),
-        'views-6b8b5c3b63dc13e1c65f06ceced8ba44' => array(
-          'module' => 'views',
-          'delta' => '6b8b5c3b63dc13e1c65f06ceced8ba44',
-          'region' => 'content',
-          'weight' => '-8',
-        ),
-        'boxes-donate_connect' => array(
-          'module' => 'boxes',
-          'delta' => 'donate_connect',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
-        ),
-        'views-c47eaa322b00e97715411cb2364910ee' => array(
-          'module' => 'views',
-          'delta' => 'c47eaa322b00e97715411cb2364910ee',
-          'region' => 'sidebar_second',
-          'weight' => '-9',
-        ),
-        'views-13b59a4e67ae2906e8bb9d598dff69df' => array(
-          'module' => 'views',
-          'delta' => '13b59a4e67ae2906e8bb9d598dff69df',
-          'region' => 'sidebar_second',
-          'weight' => '-8',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 0;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('home');
-  t('homepage');
-  $export['Home'] = $context;
-
-  $context = new stdClass;
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
   $context->name = 'News';
   $context->description = 'News';
   $context->tag = 'news';
@@ -467,6 +398,93 @@ function sr_core_context_default_contexts() {
   t('sponsor page');
   t('sponsors');
   $export['clone_of_Sponsors'] = $context;
+
+  $context = new stdClass;
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'home';
+  $context->description = 'homepage';
+  $context->tag = 'home';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        '<front>' => '<front>',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'rotating_banner-1' => array(
+          'module' => 'rotating_banner',
+          'delta' => 1,
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+        'boxes-whatwedo' => array(
+          'module' => 'boxes',
+          'delta' => 'whatwedo',
+          'region' => 'content',
+          'weight' => '-9',
+        ),
+        'views-latest_news-block' => array(
+          'module' => 'views',
+          'delta' => 'latest_news-block',
+          'region' => 'content',
+          'weight' => '-8',
+        ),
+        'views-6b8b5c3b63dc13e1c65f06ceced8ba44' => array(
+          'module' => 'views',
+          'delta' => '6b8b5c3b63dc13e1c65f06ceced8ba44',
+          'region' => 'content',
+          'weight' => '-7',
+        ),
+        'boxes-mission' => array(
+          'module' => 'boxes',
+          'delta' => 'mission',
+          'region' => 'branding_second',
+          'weight' => '-10',
+        ),
+        'boxes-donate_connect' => array(
+          'module' => 'boxes',
+          'delta' => 'donate_connect',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+        'views-c47eaa322b00e97715411cb2364910ee' => array(
+          'module' => 'views',
+          'delta' => 'c47eaa322b00e97715411cb2364910ee',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+        'views-13b59a4e67ae2906e8bb9d598dff69df' => array(
+          'module' => 'views',
+          'delta' => '13b59a4e67ae2906e8bb9d598dff69df',
+          'region' => 'sidebar_second',
+          'weight' => '-8',
+        ),
+        'boxes-footer_data' => array(
+          'module' => 'boxes',
+          'delta' => 'footer_data',
+          'region' => 'footer_first',
+          'weight' => '-10',
+        ),
+        'boxes-footer_credits' => array(
+          'module' => 'boxes',
+          'delta' => 'footer_credits',
+          'region' => 'footer_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('home');
+  t('homepage');
+  $export['home'] = $context;
 
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */

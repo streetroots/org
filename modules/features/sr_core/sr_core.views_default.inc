@@ -979,6 +979,120 @@ function sr_core_views_default_views() {
   $export['homepage_sponsors'] = $view;
 
   $view = new view;
+  $view->name = 'latest_news';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'aggregator_item';
+  $view->human_name = 'Latest News';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Latest News';
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Aggregator: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'aggregator_item';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['title']['display_as_link'] = 1;
+  /* Field: Aggregator: Body */
+  $handler->display->display_options['fields']['description']['id'] = 'description';
+  $handler->display->display_options['fields']['description']['table'] = 'aggregator_item';
+  $handler->display->display_options['fields']['description']['field'] = 'description';
+  $handler->display->display_options['fields']['description']['label'] = '';
+  $handler->display->display_options['fields']['description']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['description']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['description']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['description']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['description']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['description']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['description']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['description']['alter']['max_length'] = '400';
+  $handler->display->display_options['fields']['description']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['description']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['description']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['description']['alter']['trim'] = 1;
+  $handler->display->display_options['fields']['description']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['description']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['description']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['description']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['description']['hide_alter_empty'] = 1;
+  /* Field: Aggregator: Link */
+  $handler->display->display_options['fields']['link']['id'] = 'link';
+  $handler->display->display_options['fields']['link']['table'] = 'aggregator_item';
+  $handler->display->display_options['fields']['link']['field'] = 'link';
+  $handler->display->display_options['fields']['link']['label'] = '';
+  $handler->display->display_options['fields']['link']['alter']['alter_text'] = 1;
+  $handler->display->display_options['fields']['link']['alter']['text'] = '<a href="[link]" class="read-more">More</a>';
+  $handler->display->display_options['fields']['link']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['link']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['link']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['link']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['link']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['link']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['link']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['link']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['link']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['link']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['link']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['link']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['link']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['link']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['link']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['link']['display_as_link'] = 0;
+  /* Sort criterion: Aggregator: Timestamp */
+  $handler->display->display_options['sorts']['timestamp']['id'] = 'timestamp';
+  $handler->display->display_options['sorts']['timestamp']['table'] = 'aggregator_item';
+  $handler->display->display_options['sorts']['timestamp']['field'] = 'timestamp';
+  $handler->display->display_options['sorts']['timestamp']['order'] = 'DESC';
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $translatables['latest_news'] = array(
+    t('Master'),
+    t('Latest News'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('<a href="[link]" class="read-more">More</a>'),
+    t('Block'),
+  );
+  $export['latest_news'] = $view;
+
+  $view = new view;
   $view->name = 'levelfive_sponsors';
   $view->description = 'levelfive_sponsors';
   $view->tag = 'levelfive_sponsors';
