@@ -415,29 +415,35 @@ function sr_core_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'system-main' => array(
+          'module' => 'system',
+          'delta' => 'main',
+          'region' => 'content',
+          'weight' => '-90',
+        ),
         'rotating_banner-1' => array(
           'module' => 'rotating_banner',
           'delta' => 1,
           'region' => 'content',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'boxes-whatwedo' => array(
           'module' => 'boxes',
           'delta' => 'whatwedo',
           'region' => 'content',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
         'views-latest_news-block' => array(
           'module' => 'views',
           'delta' => 'latest_news-block',
           'region' => 'content',
-          'weight' => '-8',
+          'weight' => '-7',
         ),
         'views-6b8b5c3b63dc13e1c65f06ceced8ba44' => array(
           'module' => 'views',
           'delta' => '6b8b5c3b63dc13e1c65f06ceced8ba44',
           'region' => 'content',
-          'weight' => '-7',
+          'weight' => '-6',
         ),
         'boxes-mission' => array(
           'module' => 'boxes',
@@ -507,11 +513,23 @@ function sr_core_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'delta_blocks-breadcrumb' => array(
+          'module' => 'delta_blocks',
+          'delta' => 'breadcrumb',
+          'region' => 'content',
+          'weight' => '-100',
+        ),
+        'system-main' => array(
+          'module' => 'system',
+          'delta' => 'main',
+          'region' => 'content',
+          'weight' => '-90',
+        ),
         'views-cbd20254f5b49a9e534199b96f449616' => array(
           'module' => 'views',
           'delta' => 'cbd20254f5b49a9e534199b96f449616',
           'region' => 'content',
-          'weight' => '9',
+          'weight' => '-8',
         ),
         'search-form' => array(
           'module' => 'search',
