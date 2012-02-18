@@ -90,7 +90,7 @@ function sr_core_default_box() {
   $box->description = 'Donate and Connect sitewide';
   $box->options = array(
     'body' => array(
-      'value' => '<h3>Keep us strong</h3>
+      'value' => '<h3 class="first">Keep us strong</h3>
 <a class="button" href="https://org2.democracyinaction.org/o/5474/t/3276/shop/custom.jsp?donate_page_KEY=421" title="Donate securely to Street Roots via Democracy in Action">Donate via Democracy in Action</a>
 <h3>Keep in touch</h3>
 <ul class="follow clearfix">
