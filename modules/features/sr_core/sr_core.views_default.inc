@@ -77,6 +77,7 @@ function sr_core_views_default_views() {
     'image_style' => 'third',
     'image_link' => 'content',
   );
+  $handler->display->display_options['fields']['field_campaign_image']['group_column'] = 'fid';
   $handler->display->display_options['fields']['field_campaign_image']['field_api_classes'] = 0;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
@@ -741,6 +742,7 @@ function sr_core_views_default_views() {
     'image_style' => 'thumbnail',
     'image_link' => 'content',
   );
+  $handler->display->display_options['fields']['entity_id_1']['group_column'] = 'fid';
   $handler->display->display_options['fields']['entity_id_1']['field_api_classes'] = 0;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['entity_id']['id'] = 'entity_id';
@@ -824,11 +826,16 @@ function sr_core_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['hide_empty'] = 1;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'AND',
+  );
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published or admin */
   $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
   $handler->display->display_options['filters']['status_extra']['table'] = 'node';
   $handler->display->display_options['filters']['status_extra']['field'] = 'status_extra';
+  $handler->display->display_options['filters']['status_extra']['group'] = 1;
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -836,11 +843,13 @@ function sr_core_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'announcement' => 'announcement',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Content: Sticky */
   $handler->display->display_options['filters']['sticky']['id'] = 'sticky';
   $handler->display->display_options['filters']['sticky']['table'] = 'node';
   $handler->display->display_options['filters']['sticky']['field'] = 'sticky';
   $handler->display->display_options['filters']['sticky']['value'] = '1';
+  $handler->display->display_options['filters']['sticky']['group'] = 1;
 
   /* Display: homepage_announcement_bottom */
   $handler = $view->new_display('block', 'homepage_announcement_bottom', 'homepage_announcement_block_2');
@@ -857,11 +866,16 @@ function sr_core_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['hide_empty'] = 1;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'AND',
+  );
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published or admin */
   $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
   $handler->display->display_options['filters']['status_extra']['table'] = 'node';
   $handler->display->display_options['filters']['status_extra']['field'] = 'status_extra';
+  $handler->display->display_options['filters']['status_extra']['group'] = 1;
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -869,11 +883,13 @@ function sr_core_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'announcement' => 'announcement',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Content: Sticky */
   $handler->display->display_options['filters']['sticky']['id'] = 'sticky';
   $handler->display->display_options['filters']['sticky']['table'] = 'node';
   $handler->display->display_options['filters']['sticky']['field'] = 'sticky';
   $handler->display->display_options['filters']['sticky']['value'] = '0';
+  $handler->display->display_options['filters']['sticky']['group'] = 1;
   $translatables['homepage_announcement_1'] = array(
     t('Defaults'),
     t('more'),
@@ -905,6 +921,9 @@ function sr_core_views_default_views() {
   /* Display: Defaults */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->display->display_options['title'] = 'Some of our Sponsors';
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['use_more_text'] = 'See all of our sponsors, supporters, and friends';
+  $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -961,10 +980,11 @@ function sr_core_views_default_views() {
   /* Display: Homepage Sponsors Block */
   $handler = $view->new_display('block', 'Homepage Sponsors Block', 'homepage_sponsors_block');
   $handler->display->display_options['display_description'] = 'Homepage Sponsors Block';
+  $handler->display->display_options['link_url'] = 'support/sponsors';
   $translatables['homepage_sponsors'] = array(
     t('Defaults'),
     t('Some of our Sponsors'),
-    t('more'),
+    t('See all of our sponsors, supporters, and friends'),
     t('Apply'),
     t('Reset'),
     t('Sort by'),
@@ -975,6 +995,7 @@ function sr_core_views_default_views() {
     t('Offset'),
     t('flag'),
     t('Homepage Sponsors Block'),
+    t('more'),
   );
   $export['homepage_sponsors'] = $view;
 
@@ -2222,6 +2243,7 @@ function sr_core_views_default_views() {
     'image_style' => 'third',
     'image_link' => 'content',
   );
+  $handler->display->display_options['fields']['field_vendor_photo']['group_column'] = 'fid';
   $handler->display->display_options['fields']['field_vendor_photo']['field_api_classes'] = 0;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';

@@ -439,6 +439,12 @@ function sr_core_context_default_contexts() {
           'region' => 'content',
           'weight' => '-7',
         ),
+        'search-form' => array(
+          'module' => 'search',
+          'delta' => 'form',
+          'region' => 'user_second',
+          'weight' => '-10',
+        ),
         'boxes-mission' => array(
           'module' => 'boxes',
           'delta' => 'mission',

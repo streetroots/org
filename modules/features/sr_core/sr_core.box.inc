@@ -86,7 +86,7 @@ function sr_core_default_box() {
   $box->api_version = 1;
   $box->delta = 'donate_connect';
   $box->plugin_key = 'simple';
-  $box->title = 'Keep Us Strong';
+  $box->title = 'Keep Us Strong :: Keep In Touch';
   $box->description = 'Donate and Connect sitewide';
   $box->options = array(
     'body' => array(
@@ -102,6 +102,7 @@ function sr_core_default_box() {
 </form>',
       'format' => 'full_html',
     ),
+    'additional_classes' => '',
   );
   $export['donate_connect'] = $box;
 
@@ -514,7 +515,7 @@ function sr_core_default_box() {
   $box->description = 'friends and supporters link box';
   $box->options = array(
     'body' => array(
-      'value' => '<h2><span><a href="support/sponsors">See our friends, supporters, and sponsors</a></span></h2>',
+      'value' => '<h2><span><a href="/support/sponsors">See our friends, supporters, and sponsors</a></span></h2>',
       'format' => 'full_html',
     ),
     'additional_classes' => '',
