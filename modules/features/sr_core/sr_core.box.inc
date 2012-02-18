@@ -86,15 +86,18 @@ function sr_core_default_box() {
   $box->api_version = 1;
   $box->delta = 'donate_connect';
   $box->plugin_key = 'simple';
-  $box->title = 'Keep Us Strong :: Keep In Touch';
+  $box->title = '';
   $box->description = 'Donate and Connect sitewide';
   $box->options = array(
     'body' => array(
-      'value' => '<a class="button" href="https://org2.democracyinaction.org/o/5474/t/3276/shop/custom.jsp?donate_page_KEY=421">Donate</a><br />
+      'value' => '<h3>Keep us strong</h3>
+<a class="button" href="https://org2.democracyinaction.org/o/5474/t/3276/shop/custom.jsp?donate_page_KEY=421" title="Donate securely to Street Roots via Democracy in Action">Donate via Democracy in Action</a>
+<h3>Keep in touch</h3>
 <ul class="follow clearfix">
-  <li><a class="follow-fb" href="http://example.com">Join us on Facebook</a></li>
-  <li><a class="follow-twitter" href="http://example.com">Follow us on Twitter</a></li>
-  <li><a class="follow-youtube" href="http://example.com">Streetroots Youtube Channel</a></li>
+  <li><a class="follow-rss" href="http://streetroots.wordpress.com/feed/">Subscribe to Street Roots news online</a></li>
+  <li><a class="follow-fb" href="">Join us on Facebook</a></li>
+  <li><a class="follow-twitter" href="http://twitter.com/streetroots">Follow us on Twitter</a></li>
+  <li><a class="follow-vimeo" href="http://vimeo.com/user9472930">Streetroots Youtube Channel</a></li>
   <li><a class="follow-email" href="/contact">Contact Us</a></li>
 </ul>
 <h3>Sign up for our newsletter</h3>
