@@ -95,7 +95,7 @@ function sr_core_default_box() {
 <h3>Keep in touch</h3>
 <ul class="follow clearfix">
   <li><a class="follow-rss" href="http://streetroots.wordpress.com/feed/">Subscribe to Street Roots news online</a></li>
-  <li><a class="follow-fb" href="">Join us on Facebook</a></li>
+  <li><a class="follow-fb" href="http://www.facebook.com/pages/Street-Roots/246877005382857">Join us on Facebook</a></li>
   <li><a class="follow-twitter" href="http://twitter.com/streetroots">Follow us on Twitter</a></li>
   <li><a class="follow-vimeo" href="http://vimeo.com/user9472930">Street Roots Vimeo Channel</a></li>
   <li><a class="follow-email" href="/contact/hello">Contact Us</a></li>
