@@ -30,9 +30,8 @@ function sr_core_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
-  $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['columns'] = '2';
-  $handler->display->display_options['style_options']['fill_single_line'] = 1;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'grid-4 alpha';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['hide_empty'] = 1;
   /* Field: Content: Title */
@@ -121,9 +120,8 @@ function sr_core_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['columns'] = '2';
-  $handler->display->display_options['style_options']['fill_single_line'] = 1;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'grid-4 alpha';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'node';
@@ -525,12 +523,10 @@ function sr_core_views_default_views() {
   $handler->display->display_options['filters']['field_sponsor_level_tid']['id'] = 'field_sponsor_level_tid';
   $handler->display->display_options['filters']['field_sponsor_level_tid']['table'] = 'field_data_field_sponsor_level';
   $handler->display->display_options['filters']['field_sponsor_level_tid']['field'] = 'field_sponsor_level_tid';
-  $handler->display->display_options['filters']['field_sponsor_level_tid']['operator'] = '=';
   $handler->display->display_options['filters']['field_sponsor_level_tid']['value'] = array(
-    'min' => '',
-    'max' => '',
-    'value' => '6',
+    0 => '6',
   );
+  $handler->display->display_options['filters']['field_sponsor_level_tid']['reduce_duplicates'] = 0;
   $handler->display->display_options['filters']['field_sponsor_level_tid']['vocabulary'] = 'sponsor_level';
 
   /* Display: Foundation Sponsors Block */
@@ -739,7 +735,7 @@ function sr_core_views_default_views() {
   $handler->display->display_options['fields']['entity_id_1']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['entity_id_1']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['entity_id_1']['settings'] = array(
-    'image_style' => 'thumbnail',
+    'image_style' => 'content_third',
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['entity_id_1']['group_column'] = 'fid';
@@ -807,8 +803,8 @@ function sr_core_views_default_views() {
   $handler->display->display_options['filters']['sticky']['table'] = 'node';
   $handler->display->display_options['filters']['sticky']['field'] = 'sticky';
 
-  /* Display: homepage_announcement_top */
-  $handler = $view->new_display('block', 'homepage_announcement_top', 'homepage_announcement_block_1');
+  /* Display: homepage_announcement_lower */
+  $handler = $view->new_display('block', 'homepage_announcement_lower', 'homepage_announcement_block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Announcements';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
@@ -817,19 +813,6 @@ function sr_core_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['columns'] = '1';
-  $handler->display->display_options['style_options']['fill_single_line'] = 1;
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['hide_empty'] = 1;
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['filter_groups']['groups'] = array(
-    1 => 'AND',
-    2 => 'AND',
-  );
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published or admin */
   $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
@@ -851,25 +834,19 @@ function sr_core_views_default_views() {
   $handler->display->display_options['filters']['sticky']['value'] = '1';
   $handler->display->display_options['filters']['sticky']['group'] = 1;
 
-  /* Display: homepage_announcement_bottom */
-  $handler = $view->new_display('block', 'homepage_announcement_bottom', 'homepage_announcement_block_2');
-  $handler->display->display_options['display_description'] = '2nd homepage announcement';
+  /* Display: homepage_announcement_upper */
+  $handler = $view->new_display('block', 'homepage_announcement_upper', 'homepage_announcement_block_2');
+  $handler->display->display_options['display_description'] = 'top homepage announcement';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['columns'] = '1';
-  $handler->display->display_options['style_options']['fill_single_line'] = 1;
+  $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['hide_empty'] = 1;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['filter_groups']['groups'] = array(
-    1 => 'AND',
-    2 => 'AND',
-  );
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published or admin */
   $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
@@ -901,10 +878,10 @@ function sr_core_views_default_views() {
     t('Items per page'),
     t('- All -'),
     t('Offset'),
-    t('homepage_announcement_top'),
+    t('homepage_announcement_lower'),
     t('Announcements'),
-    t('homepage_announcement_bottom'),
-    t('2nd homepage announcement'),
+    t('homepage_announcement_upper'),
+    t('top homepage announcement'),
   );
   $export['homepage_announcement_1'] = $view;
 
@@ -934,8 +911,8 @@ function sr_core_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
-  $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['fill_single_line'] = 1;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'grid-2 alpha';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: Flags: homepage_sponsor */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
@@ -1241,7 +1218,7 @@ function sr_core_views_default_views() {
 
   /* Display: Defaults */
   $handler = $view->new_display('default', 'Defaults', 'default');
-  $handler->display->display_options['title'] = 'Level Four Sponsors';
+  $handler->display->display_options['title'] = 'Sustaining Sponsors';
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -1292,20 +1269,18 @@ function sr_core_views_default_views() {
   $handler->display->display_options['filters']['field_sponsor_level_tid']['id'] = 'field_sponsor_level_tid';
   $handler->display->display_options['filters']['field_sponsor_level_tid']['table'] = 'field_data_field_sponsor_level';
   $handler->display->display_options['filters']['field_sponsor_level_tid']['field'] = 'field_sponsor_level_tid';
-  $handler->display->display_options['filters']['field_sponsor_level_tid']['operator'] = '=';
   $handler->display->display_options['filters']['field_sponsor_level_tid']['value'] = array(
-    'min' => '',
-    'max' => '',
-    'value' => '8',
+    0 => '8',
   );
+  $handler->display->display_options['filters']['field_sponsor_level_tid']['reduce_duplicates'] = 0;
   $handler->display->display_options['filters']['field_sponsor_level_tid']['vocabulary'] = 'sponsor_level';
 
-  /* Display: Level Four Sponsors Block */
-  $handler = $view->new_display('block', 'Level Four Sponsors Block', 'levelfour_sponsors_block');
-  $handler->display->display_options['display_description'] = 'Level Four Sponsors Block';
+  /* Display: Sustaining Sponsors Block */
+  $handler = $view->new_display('block', 'Sustaining Sponsors Block', 'levelfour_sponsors_block');
+  $handler->display->display_options['display_description'] = 'Sustaining Sponsors Block';
   $translatables['levelfour_sponsors'] = array(
     t('Defaults'),
-    t('Level Four Sponsors'),
+    t('Sustaining Sponsors'),
     t('more'),
     t('Apply'),
     t('Reset'),
@@ -1315,7 +1290,7 @@ function sr_core_views_default_views() {
     t('Items per page'),
     t('- All -'),
     t('Offset'),
-    t('Level Four Sponsors Block'),
+    t('Sustaining Sponsors Block'),
   );
   $export['levelfour_sponsors'] = $view;
 
@@ -1331,7 +1306,7 @@ function sr_core_views_default_views() {
 
   /* Display: Defaults */
   $handler = $view->new_display('default', 'Defaults', 'default');
-  $handler->display->display_options['title'] = 'Level One Sponsors';
+  $handler->display->display_options['title'] = 'Visionary Sponsors';
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -1382,20 +1357,18 @@ function sr_core_views_default_views() {
   $handler->display->display_options['filters']['field_sponsor_level_tid']['id'] = 'field_sponsor_level_tid';
   $handler->display->display_options['filters']['field_sponsor_level_tid']['table'] = 'field_data_field_sponsor_level';
   $handler->display->display_options['filters']['field_sponsor_level_tid']['field'] = 'field_sponsor_level_tid';
-  $handler->display->display_options['filters']['field_sponsor_level_tid']['operator'] = '=';
   $handler->display->display_options['filters']['field_sponsor_level_tid']['value'] = array(
-    'min' => '',
-    'max' => '',
-    'value' => '11',
+    0 => '11',
   );
+  $handler->display->display_options['filters']['field_sponsor_level_tid']['reduce_duplicates'] = 0;
   $handler->display->display_options['filters']['field_sponsor_level_tid']['vocabulary'] = 'sponsor_level';
 
-  /* Display: Level One Sponsors Block */
-  $handler = $view->new_display('block', 'Level One Sponsors Block', 'levelone_sponsors_block');
-  $handler->display->display_options['display_description'] = 'Level One Sponsors Block';
+  /* Display: Visionary Sponsors Block */
+  $handler = $view->new_display('block', 'Visionary Sponsors Block', 'levelone_sponsors_block');
+  $handler->display->display_options['display_description'] = 'Visionary Sponsors Block';
   $translatables['levelone_sponsors'] = array(
     t('Defaults'),
-    t('Level One Sponsors'),
+    t('Visionary Sponsors'),
     t('more'),
     t('Apply'),
     t('Reset'),
@@ -1405,7 +1378,7 @@ function sr_core_views_default_views() {
     t('Items per page'),
     t('- All -'),
     t('Offset'),
-    t('Level One Sponsors Block'),
+    t('Visionary Sponsors Block'),
   );
   $export['levelone_sponsors'] = $view;
 
@@ -1421,7 +1394,7 @@ function sr_core_views_default_views() {
 
   /* Display: Defaults */
   $handler = $view->new_display('default', 'Defaults', 'default');
-  $handler->display->display_options['title'] = 'Level Three Sponsors';
+  $handler->display->display_options['title'] = 'Catalyst Sponsors';
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -1472,20 +1445,18 @@ function sr_core_views_default_views() {
   $handler->display->display_options['filters']['field_sponsor_level_tid']['id'] = 'field_sponsor_level_tid';
   $handler->display->display_options['filters']['field_sponsor_level_tid']['table'] = 'field_data_field_sponsor_level';
   $handler->display->display_options['filters']['field_sponsor_level_tid']['field'] = 'field_sponsor_level_tid';
-  $handler->display->display_options['filters']['field_sponsor_level_tid']['operator'] = '=';
   $handler->display->display_options['filters']['field_sponsor_level_tid']['value'] = array(
-    'min' => '',
-    'max' => '',
-    'value' => '9',
+    0 => '9',
   );
+  $handler->display->display_options['filters']['field_sponsor_level_tid']['reduce_duplicates'] = 0;
   $handler->display->display_options['filters']['field_sponsor_level_tid']['vocabulary'] = 'sponsor_level';
 
-  /* Display: Level Three Sponsors Block */
-  $handler = $view->new_display('block', 'Level Three Sponsors Block', 'levelthree_sponsors_block');
-  $handler->display->display_options['display_description'] = 'Level Three Sponsors Block';
+  /* Display: Catalyst Sponsors Block */
+  $handler = $view->new_display('block', 'Catalyst Sponsors Block', 'levelthree_sponsors_block');
+  $handler->display->display_options['display_description'] = 'Catalyst Sponsors Block';
   $translatables['levelthree_sponsors'] = array(
     t('Defaults'),
-    t('Level Three Sponsors'),
+    t('Catalyst Sponsors'),
     t('more'),
     t('Apply'),
     t('Reset'),
@@ -1495,7 +1466,7 @@ function sr_core_views_default_views() {
     t('Items per page'),
     t('- All -'),
     t('Offset'),
-    t('Level Three Sponsors Block'),
+    t('Catalyst Sponsors Block'),
   );
   $export['levelthree_sponsors'] = $view;
 
@@ -1511,7 +1482,7 @@ function sr_core_views_default_views() {
 
   /* Display: Defaults */
   $handler = $view->new_display('default', 'Defaults', 'default');
-  $handler->display->display_options['title'] = 'Level Two Sponsors';
+  $handler->display->display_options['title'] = 'Change Maker Sponsors';
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -1562,20 +1533,18 @@ function sr_core_views_default_views() {
   $handler->display->display_options['filters']['field_sponsor_level_tid']['id'] = 'field_sponsor_level_tid';
   $handler->display->display_options['filters']['field_sponsor_level_tid']['table'] = 'field_data_field_sponsor_level';
   $handler->display->display_options['filters']['field_sponsor_level_tid']['field'] = 'field_sponsor_level_tid';
-  $handler->display->display_options['filters']['field_sponsor_level_tid']['operator'] = '=';
   $handler->display->display_options['filters']['field_sponsor_level_tid']['value'] = array(
-    'min' => '',
-    'max' => '',
-    'value' => '10',
+    0 => '10',
   );
+  $handler->display->display_options['filters']['field_sponsor_level_tid']['reduce_duplicates'] = 0;
   $handler->display->display_options['filters']['field_sponsor_level_tid']['vocabulary'] = 'sponsor_level';
 
-  /* Display: Level Two Sponsors Block */
-  $handler = $view->new_display('block', 'Level Two Sponsors Block', 'leveltwo_sponsors_block');
-  $handler->display->display_options['display_description'] = 'Level Two Sponsors Block';
+  /* Display: Change Maker Sponsors Block */
+  $handler = $view->new_display('block', 'Change Maker Sponsors Block', 'leveltwo_sponsors_block');
+  $handler->display->display_options['display_description'] = 'Change Maker Sponsors Block';
   $translatables['leveltwo_sponsors'] = array(
     t('Defaults'),
-    t('Level Two Sponsors'),
+    t('Change Maker Sponsors'),
     t('more'),
     t('Apply'),
     t('Reset'),
@@ -1585,7 +1554,7 @@ function sr_core_views_default_views() {
     t('Items per page'),
     t('- All -'),
     t('Offset'),
-    t('Level Two Sponsors Block'),
+    t('Change Maker Sponsors Block'),
   );
   $export['leveltwo_sponsors'] = $view;
 
@@ -1718,6 +1687,7 @@ function sr_core_views_default_views() {
 
   /* Display: Defaults */
   $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->display->display_options['title'] = 'Our People';
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -1864,6 +1834,7 @@ function sr_core_views_default_views() {
   $handler->display->display_options['path'] = 'about/people';
   $translatables['our_people'] = array(
     t('Defaults'),
+    t('Our People'),
     t('more'),
     t('Apply'),
     t('Reset'),
@@ -2007,7 +1978,8 @@ function sr_core_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
-  $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'grid-4 alpha';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -2085,6 +2057,7 @@ function sr_core_views_default_views() {
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'grid4 alpha';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'node';
@@ -2092,7 +2065,7 @@ function sr_core_views_default_views() {
   $handler->display->display_options['row_options']['links'] = 1;
   $handler->display->display_options['row_options']['comments'] = 0;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['path'] = 'vendor-photo-gallery';
+  $handler->display->display_options['path'] = 'about/work/vendor/vendor-photo-gallery';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -2100,16 +2073,6 @@ function sr_core_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['columns'] = '2';
-  $handler->display->display_options['style_options']['alignment'] = 'vertical';
-  $handler->display->display_options['style_options']['fill_single_line'] = 1;
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['hide_empty'] = 0;
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -2237,8 +2200,8 @@ function sr_core_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
-  $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['fill_single_line'] = 1;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'grid-4 alpha';
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['links'] = 1;
   $handler->display->display_options['row_options']['comments'] = 0;
@@ -2266,7 +2229,7 @@ function sr_core_views_default_views() {
   $handler->display->display_options['fields']['field_vendor_photo']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_vendor_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_vendor_photo']['settings'] = array(
-    'image_style' => 'third',
+    'image_style' => 'content_third',
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_vendor_photo']['group_column'] = 'fid';
@@ -2343,17 +2306,7 @@ function sr_core_views_default_views() {
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Vendor Profiles';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['columns'] = '2';
-  $handler->display->display_options['style_options']['fill_single_line'] = 1;
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['hide_empty'] = 1;
-  $handler->display->display_options['row_options']['default_field_elements'] = 1;
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['path'] = 'about/vendor/vendor-profile';
+  $handler->display->display_options['path'] = 'about/people/vendors';
 
   /* Display: Feed */
   $handler = $view->new_display('feed', 'Feed', 'feed');
@@ -2372,15 +2325,6 @@ function sr_core_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['fill_single_line'] = 1;
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['hide_empty'] = 1;
-  $handler->display->display_options['row_options']['default_field_elements'] = 1;
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';

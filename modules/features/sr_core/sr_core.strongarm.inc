@@ -42,7 +42,7 @@ function sr_core_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_photo_gallery';
-  $strongarm->value = 'edit-comment';
+  $strongarm->value = 'edit-menu';
   $export['additional_settings__active_tab_photo_gallery'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -70,7 +70,7 @@ function sr_core_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_vendor_profile';
-  $strongarm->value = 'edit-workflow';
+  $strongarm->value = 'edit-menu';
   $export['additional_settings__active_tab_vendor_profile'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -874,7 +874,7 @@ function sr_core_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_photo_gallery';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'main-menu:2422';
   $export['menu_parent_photo_gallery'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -902,7 +902,7 @@ function sr_core_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_vendor_profile';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'main-menu:2422';
   $export['menu_parent_vendor_profile'] = $strongarm;
 
   $strongarm = new stdClass;

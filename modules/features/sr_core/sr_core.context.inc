@@ -331,6 +331,7 @@ function sr_core_context_default_contexts() {
     'path' => array(
       'values' => array(
         'about/advocacy' => 'about/advocacy',
+        'about/work/advocacy' => 'about/work/advocacy',
       ),
     ),
   );
@@ -502,6 +503,7 @@ function sr_core_context_default_contexts() {
     'path' => array(
       'values' => array(
         '~<front>' => '~<front>',
+        '~/admin/*' => '~/admin/*',
       ),
     ),
     'sitewide' => array(

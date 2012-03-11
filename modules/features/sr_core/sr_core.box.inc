@@ -97,8 +97,8 @@ function sr_core_default_box() {
   <li><a class="follow-rss" href="http://streetroots.wordpress.com/feed/">Subscribe to Street Roots news online</a></li>
   <li><a class="follow-fb" href="">Join us on Facebook</a></li>
   <li><a class="follow-twitter" href="http://twitter.com/streetroots">Follow us on Twitter</a></li>
-  <li><a class="follow-vimeo" href="http://vimeo.com/user9472930">Streetroots Youtube Channel</a></li>
-  <li><a class="follow-email" href="/contact">Contact Us</a></li>
+  <li><a class="follow-vimeo" href="http://vimeo.com/user9472930">Street Roots Vimeo Channel</a></li>
+  <li><a class="follow-email" href="/contact/hello">Contact Us</a></li>
 </ul>
 <h3>Sign up for our newsletter</h3>
 <form method="get" action="http://org2.democracyinaction.org/dia/api/process.jsp"><input type="hidden" name="table" value="supporter"><input type="hidden" name="organization_KEY" value="5474"><input type="hidden" name="redirect" value="newsletterthanks"><input name="Email" placeholder="Email Address"><input type="Submit" value="Subscribe" class="button">
@@ -484,13 +484,14 @@ function sr_core_default_box() {
   $box->options = array(
     'body' => array(
       'value' => '<ul id="sr-navigate-side">
-  <li><a class="sr-nav sr-nav-vendor" href="/about/vendor">Vendor Program</a></li>
-  <li><a class="sr-nav sr-nav-resource" href="/about/resourceguide">Resource Guide</a></li>
-  <li><a class="sr-nav sr-nav-newspaper" href="/about/newspaper">Newspaper</a></li>
-  <li><a class="sr-nav sr-nav-advocacy" href="/about/advocacy">Advocacy</a></li>
+  <li><a class="sr-nav sr-nav-vendor" href="/about/work/vendor">Vendor Program</a></li>
+  <li><a class="sr-nav sr-nav-resource" href="/about/work/resourceguide">Resource Guide</a></li>
+  <li><a class="sr-nav sr-nav-newspaper" href="/about/work/newspaper">Newspaper</a></li>
+  <li><a class="sr-nav sr-nav-advocacy" href="/about/work/advocacy">Advocacy</a></li>
 </ul>',
       'format' => 'full_html',
     ),
+    'additional_classes' => '',
   );
   $export['ourwork_menu'] = $box;
 
@@ -535,13 +536,14 @@ function sr_core_default_box() {
   $box->options = array(
     'body' => array(
       'value' => '<ul id="sr-navigate" class="clearfix">
-  <li><a class="sr-nav sr-nav-vendor" href="/about/vendor">Vendor Program</a></li>
-  <li><a class="sr-nav sr-nav-resource" href="/about/resourceguide">Resource Guide</a></li>
-  <li><a class="sr-nav sr-nav-newspaper" href="/about/newspaper">Newspaper</a></li>
-  <li><a class="sr-nav sr-nav-advocacy" href="/about/advocacy">Advocacy</a></li>
+  <li><a class="sr-nav sr-nav-vendor" href="/about/work/vendor">Vendor Program</a></li>
+  <li><a class="sr-nav sr-nav-resource" href="/about/work/resourceguide">Resource Guide</a></li>
+  <li><a class="sr-nav sr-nav-newspaper" href="/about/work/newspaper">Newspaper</a></li>
+  <li><a class="sr-nav sr-nav-advocacy" href="/about/work/advocacy">Advocacy</a></li>
 </ul>',
       'format' => 'full_html',
     ),
+    'additional_classes' => '',
   );
   $export['whatwedo'] = $box;
 
