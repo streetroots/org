@@ -13,7 +13,7 @@ function sr_core_context_default_contexts() {
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'News';
+  $context->name = 'news';
   $context->description = 'News';
   $context->tag = 'news';
   $context->conditions = array(
@@ -58,7 +58,7 @@ function sr_core_context_default_contexts() {
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'Sponsors';
+  $context->name = 'sponsors';
   $context->description = 'sponsor page';
   $context->tag = 'sponsors';
   $context->conditions = array(
@@ -127,7 +127,7 @@ function sr_core_context_default_contexts() {
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'Support';
+  $context->name = 'support';
   $context->description = 'Support page';
   $context->tag = 'support';
   $context->conditions = array(
@@ -166,7 +166,7 @@ function sr_core_context_default_contexts() {
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'Vendor Program';
+  $context->name = 'vendor_program';
   $context->description = 'Vendor Program Page';
   $context->tag = 'vendor program';
   $context->conditions = array(
@@ -211,7 +211,7 @@ function sr_core_context_default_contexts() {
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'Volunteer';
+  $context->name = 'volunteer';
   $context->description = 'volunteer';
   $context->tag = 'volunteer';
   $context->conditions = array(
@@ -358,7 +358,7 @@ function sr_core_context_default_contexts() {
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'clone_of_Sponsors';
+  $context->name = 'clone_of_sponsors';
   $context->description = 'sponsor page';
   $context->tag = 'sponsors';
   $context->conditions = array(
