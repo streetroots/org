@@ -10,7 +10,7 @@
 function sr_core_default_box() {
   $export = array();
 
-  $box = new stdClass;
+  $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
   $box->delta = 'aboutourwork';
@@ -30,7 +30,7 @@ function sr_core_default_box() {
   );
   $export['aboutourwork'] = $box;
 
-  $box = new stdClass;
+  $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
   $box->delta = 'accountability';
@@ -51,7 +51,23 @@ function sr_core_default_box() {
   );
   $export['accountability'] = $box;
 
-  $box = new stdClass;
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'ad_sponsorship_inquiry_link';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'advertising and sponsorship inquiry link box';
+  $box->options = array(
+    'body' => array(
+      'value' => '<h2><span><a href="/support/inquiry">Contact us about Sponsoring or Advertising in Street Roots</a></span></h2>',
+      'format' => 'full_html',
+    ),
+    'additional_classes' => '',
+  );
+  $export['ad_sponsorship_inquiry_link'] = $box;
+
+  $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
   $box->delta = 'advocacy_by_type';
@@ -66,7 +82,7 @@ function sr_core_default_box() {
   );
   $export['advocacy_by_type'] = $box;
 
-  $box = new stdClass;
+  $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
   $box->delta = 'box-c9035927';
@@ -81,7 +97,7 @@ function sr_core_default_box() {
   );
   $export['box-c9035927'] = $box;
 
-  $box = new stdClass;
+  $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
   $box->delta = 'donate_connect';
@@ -91,11 +107,11 @@ function sr_core_default_box() {
   $box->options = array(
     'body' => array(
       'value' => '<h3 class="first">Keep us strong</h3>
-<a class="button" href="https://org2.democracyinaction.org/o/5474/t/3276/shop/custom.jsp?donate_page_KEY=421" title="Donate securely to Street Roots via Democracy in Action">Donate via Democracy in Action</a>
+<a class="button" href="https://secure.qgiv.com/for/strroo/" title="DONATE securely to Street Roots via Qgiv">Donate via Qgiv</a>
 <h3>Keep in touch</h3>
 <ul class="follow clearfix">
   <li><a class="follow-rss" href="http://streetroots.wordpress.com/feed/">Subscribe to Street Roots news online</a></li>
-  <li><a class="follow-fb" href="http://www.facebook.com/pages/Street-Roots/246877005382857">Join us on Facebook</a></li>
+  <li><a class="follow-fb" href="http://www.facebook.com/StreetRoots">Join us on Facebook</a></li>
   <li><a class="follow-twitter" href="http://twitter.com/streetroots">Follow us on Twitter</a></li>
   <li><a class="follow-vimeo" href="http://vimeo.com/user9472930">Street Roots Vimeo Channel</a></li>
   <li><a class="follow-email" href="/contact/hello">Contact Us</a></li>
@@ -109,7 +125,7 @@ function sr_core_default_box() {
   );
   $export['donate_connect'] = $box;
 
-  $box = new stdClass;
+  $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
   $box->delta = 'footer_credits';
@@ -125,7 +141,7 @@ function sr_core_default_box() {
   );
   $export['footer_credits'] = $box;
 
-  $box = new stdClass;
+  $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
   $box->delta = 'footer_data';
@@ -134,13 +150,14 @@ function sr_core_default_box() {
   $box->description = 'Footer information';
   $box->options = array(
     'body' => array(
-      'value' => '<p><strong>Street Roots</strong><br />211 NW Davis St.&nbsp;<br />Portland, OR 97209-3922<br />503-228-5657</p><p>Copyright 1998-2011 Street Roots. All rights reserved.</p>',
+      'value' => '<p><strong>Street Roots</strong><br />211 NW Davis St.&nbsp;<br />Portland, OR 97209-3922<br />503-228-5657</p><p>Copyright 1998-2012 Street Roots. All rights reserved.</p>',
       'format' => 'filtered_html',
     ),
+    'additional_classes' => '',
   );
   $export['footer_data'] = $box;
 
-  $box = new stdClass;
+  $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
   $box->delta = 'mission';
@@ -155,7 +172,23 @@ function sr_core_default_box() {
   );
   $export['mission'] = $box;
 
-  $box = new stdClass;
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'news_site_link';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'news site link box';
+  $box->options = array(
+    'body' => array(
+      'value' => '<h2><span><a href="http://news.streetroots.org/">Read online at news.streetroots.org</a></span></h2>',
+      'format' => 'full_html',
+    ),
+    'additional_classes' => '',
+  );
+  $export['news_site_link'] = $box;
+
+  $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
   $box->delta = 'newsletter_signup_form';
@@ -454,7 +487,7 @@ function sr_core_default_box() {
   );
   $export['newsletter_signup_form'] = $box;
 
-  $box = new stdClass;
+  $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
   $box->delta = 'our_people';
@@ -465,7 +498,7 @@ function sr_core_default_box() {
     'body' => array(
       'value' => '<p>
 <a href="/about/people">Staff, Board of Directors, and Volunteers</a>
-<a href="/about/work/vendor/vendor-profile">Vendors</a>
+<a href="/about/people/vendors">Vendors</a>
 <a href="/support/sponsors">Supporters and Sponsors</a>
 </p>',
       'format' => 'full_html',
@@ -474,7 +507,7 @@ function sr_core_default_box() {
   );
   $export['our_people'] = $box;
 
-  $box = new stdClass;
+  $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
   $box->delta = 'ourwork_menu';
@@ -486,7 +519,7 @@ function sr_core_default_box() {
       'value' => '<ul id="sr-navigate-side">
   <li><a class="sr-nav sr-nav-vendor" href="/about/work/vendor">Vendor Program</a></li>
   <li><a class="sr-nav sr-nav-resource" href="/about/work/resourceguide">Resource Guide</a></li>
-  <li><a class="sr-nav sr-nav-newspaper" href="/about/work/newspaper">Newspaper</a></li>
+  <li><a class="sr-nav sr-nav-newspaper" href="http://news.streetroots.org/">Newspaper</a></li>
   <li><a class="sr-nav sr-nav-advocacy" href="/about/work/advocacy">Advocacy</a></li>
 </ul>',
       'format' => 'full_html',
@@ -495,7 +528,7 @@ function sr_core_default_box() {
   );
   $export['ourwork_menu'] = $box;
 
-  $box = new stdClass;
+  $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
   $box->delta = 'pubschedule11';
@@ -510,7 +543,23 @@ function sr_core_default_box() {
   );
   $export['pubschedule11'] = $box;
 
-  $box = new stdClass;
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'resource_guide_link';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'resource guide link box';
+  $box->options = array(
+    'body' => array(
+      'value' => '<h2><span><a href="http://rosecityresource.org/">Visit the Rose City Resource guide online</a></span></h2>',
+      'format' => 'full_html',
+    ),
+    'additional_classes' => '',
+  );
+  $export['resource_guide_link'] = $box;
+
+  $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
   $box->delta = 'see_our_friends_and_supporters';
@@ -526,7 +575,7 @@ function sr_core_default_box() {
   );
   $export['see_our_friends_and_supporters'] = $box;
 
-  $box = new stdClass;
+  $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
   $box->delta = 'whatwedo';
@@ -538,7 +587,7 @@ function sr_core_default_box() {
       'value' => '<ul id="sr-navigate" class="clearfix">
   <li><a class="sr-nav sr-nav-vendor" href="/about/work/vendor">Vendor Program</a></li>
   <li><a class="sr-nav sr-nav-resource" href="/about/work/resourceguide">Resource Guide</a></li>
-  <li><a class="sr-nav sr-nav-newspaper" href="/about/work/newspaper">Newspaper</a></li>
+  <li><a class="sr-nav sr-nav-newspaper" href="http://news.streetroots.org/">Newspaper</a></li>
   <li><a class="sr-nav sr-nav-advocacy" href="/about/work/advocacy">Advocacy</a></li>
 </ul>',
       'format' => 'full_html',

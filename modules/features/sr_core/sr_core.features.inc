@@ -26,10 +26,7 @@ function sr_core_ctools_plugin_api() {
  * Implements hook_views_api().
  */
 function sr_core_views_api() {
-  list($module, $api) = func_get_args();
-  if ($module == "views" && $api == "views_default") {
-    return array("version" => "3.0");
-  }
+  return array("version" => "3.0");
 }
 
 /**
@@ -61,10 +58,12 @@ function sr_core_flag_default_flags() {
         0 => '3',
       ),
     ),
-    'show_on_page' => 1,
-    'show_on_teaser' => 1,
+    'weight' => 0,
     'show_on_form' => 0,
     'access_author' => '',
+    'show_on_page' => 1,
+    'show_on_teaser' => 1,
+    'show_contextual_link' => FALSE,
     'i18n' => 0,
     'module' => 'sr_core',
     'locked' => array(
@@ -96,10 +95,12 @@ function sr_core_flag_default_flags() {
         0 => '3',
       ),
     ),
-    'show_on_page' => 1,
-    'show_on_teaser' => 1,
+    'weight' => 0,
     'show_on_form' => 1,
     'access_author' => '',
+    'show_on_page' => 1,
+    'show_on_teaser' => 1,
+    'show_contextual_link' => FALSE,
     'i18n' => 0,
     'flag_confirmation' => 'Are you sure you want to add this sponsor to the home page?',
     'unflag_confirmation' => 'Are you sure you want to remove this sponsor from the home page?',
@@ -110,6 +111,7 @@ function sr_core_flag_default_flags() {
     'api_version' => 2,
   );
   return $flags;
+
 }
 
 /**
@@ -118,9 +120,10 @@ function sr_core_flag_default_flags() {
 function sr_core_image_default_styles() {
   $styles = array();
 
-  // Exported image style: gallery
+  // Exported image style: gallery.
   $styles['gallery'] = array(
     'name' => 'gallery',
+    'label' => 'gallery',
     'effects' => array(
       1 => array(
         'label' => 'Scale',
@@ -141,9 +144,10 @@ function sr_core_image_default_styles() {
     ),
   );
 
-  // Exported image style: sponsor_logo
+  // Exported image style: sponsor_logo.
   $styles['sponsor_logo'] = array(
     'name' => 'sponsor_logo',
+    'label' => 'sponsor_logo',
     'effects' => array(
       2 => array(
         'label' => 'Scale',
@@ -155,8 +159,8 @@ function sr_core_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
-          'width' => '110',
-          'height' => '110',
+          'width' => '600',
+          'height' => '',
           'upscale' => 0,
         ),
         'weight' => '1',

@@ -10,259 +10,11 @@
 function sr_core_context_default_contexts() {
   $export = array();
 
-  $context = new stdClass;
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
-  $context->name = 'news';
-  $context->description = 'News';
-  $context->tag = 'news';
-  $context->conditions = array(
-    'path' => array(
-      'values' => array(
-        'node/53' => 'node/53',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'aggregator-feed-2' => array(
-          'module' => 'aggregator',
-          'delta' => 'feed-2',
-          'region' => 'content',
-          'weight' => '-10',
-        ),
-        'aggregator-feed-3' => array(
-          'module' => 'aggregator',
-          'delta' => 'feed-3',
-          'region' => 'content',
-          'weight' => '-10',
-        ),
-        'aggregator-feed-1' => array(
-          'module' => 'aggregator',
-          'delta' => 'feed-1',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 0;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('News');
-  t('news');
-  $export['News'] = $context;
-
-  $context = new stdClass;
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
-  $context->name = 'sponsors';
-  $context->description = 'sponsor page';
-  $context->tag = 'sponsors';
-  $context->conditions = array(
-    'path' => array(
-      'values' => array(
-        'support/sponsors' => 'support/sponsors',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'views-63b4d486f75c67e3aa42f2072bc15339' => array(
-          'module' => 'views',
-          'delta' => '63b4d486f75c67e3aa42f2072bc15339',
-          'region' => 'content',
-          'weight' => '-21',
-        ),
-        'views-59680aa9e208549fe20d219cd09513ec' => array(
-          'module' => 'views',
-          'delta' => '59680aa9e208549fe20d219cd09513ec',
-          'region' => 'content',
-          'weight' => '-15',
-        ),
-        'views-1b1fbd4d1b1528c39fbc243b6194d267' => array(
-          'module' => 'views',
-          'delta' => '1b1fbd4d1b1528c39fbc243b6194d267',
-          'region' => 'content',
-          'weight' => '-10',
-        ),
-        'views-8f2b59290f2b9af8d04e72021d5e240d' => array(
-          'module' => 'views',
-          'delta' => '8f2b59290f2b9af8d04e72021d5e240d',
-          'region' => 'content',
-          'weight' => '-7',
-        ),
-        'views-ffbc48b22349ac130a42162c0868f543' => array(
-          'module' => 'views',
-          'delta' => 'ffbc48b22349ac130a42162c0868f543',
-          'region' => 'content',
-          'weight' => '-5',
-        ),
-        'views-b7fe2df54de25de320fd346d47009250' => array(
-          'module' => 'views',
-          'delta' => 'b7fe2df54de25de320fd346d47009250',
-          'region' => 'content',
-          'weight' => '-1',
-        ),
-        'views-community_partners-block_1' => array(
-          'module' => 'views',
-          'delta' => 'community_partners-block_1',
-          'region' => 'sidebar_first',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 0;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('sponsor page');
-  t('sponsors');
-  $export['Sponsors'] = $context;
-
-  $context = new stdClass;
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
-  $context->name = 'support';
-  $context->description = 'Support page';
-  $context->tag = 'support';
-  $context->conditions = array(
-    'path' => array(
-      'values' => array(
-        'support' => 'support',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'views-testimonials_view-block_1' => array(
-          'module' => 'views',
-          'delta' => 'testimonials_view-block_1',
-          'region' => 'content',
-          'weight' => '-10',
-        ),
-        'boxes-see_our_friends_and_supporters' => array(
-          'module' => 'boxes',
-          'delta' => 'see_our_friends_and_supporters',
-          'region' => 'content',
-          'weight' => '-9',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 0;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('Support page');
-  t('support');
-  $export['Support'] = $context;
-
-  $context = new stdClass;
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
-  $context->name = 'vendor_program';
-  $context->description = 'Vendor Program Page';
-  $context->tag = 'vendor program';
-  $context->conditions = array(
-    'path' => array(
-      'values' => array(
-        'about/vendor' => 'about/vendor',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'views-vendor_profile-block' => array(
-          'module' => 'views',
-          'delta' => 'vendor_profile-block',
-          'region' => 'content',
-          'weight' => '-32',
-        ),
-        'views-vendor_photo_gallery-block' => array(
-          'module' => 'views',
-          'delta' => 'vendor_photo_gallery-block',
-          'region' => 'content',
-          'weight' => '-31',
-        ),
-        'views-testimonials_view-block_1' => array(
-          'module' => 'views',
-          'delta' => 'testimonials_view-block_1',
-          'region' => 'content',
-          'weight' => '-30',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 0;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('Vendor Program Page');
-  t('vendor program');
-  $export['Vendor Program'] = $context;
-
-  $context = new stdClass;
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
-  $context->name = 'volunteer';
-  $context->description = 'volunteer';
-  $context->tag = 'volunteer';
-  $context->conditions = array(
-    'path' => array(
-      'values' => array(
-        'support/volunteer' => 'support/volunteer',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'block-1' => array(
-          'module' => 'block',
-          'delta' => 1,
-          'region' => 'content',
-          'weight' => '-32',
-        ),
-        'views-volunteer_opportunities-block_1' => array(
-          'module' => 'views',
-          'delta' => 'volunteer_opportunities-block_1',
-          'region' => 'content',
-          'weight' => '-31',
-        ),
-        'views-testimonials_view-block_1' => array(
-          'module' => 'views',
-          'delta' => 'testimonials_view-block_1',
-          'region' => 'content',
-          'weight' => '-30',
-        ),
-        'block-2' => array(
-          'module' => 'block',
-          'delta' => 2,
-          'region' => 'sidebar_second',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 0;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('volunteer');
-  $export['Volunteer'] = $context;
-
-  $context = new stdClass;
+  $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'about';
-  $context->description = 'About';
+  $context->description = 'About - active';
   $context->tag = 'about';
   $context->conditions = array(
     'path' => array(
@@ -276,7 +28,7 @@ function sr_core_context_default_contexts() {
       'blocks' => array(
         'rotating_banner-6' => array(
           'module' => 'rotating_banner',
-          'delta' => 6,
+          'delta' => '6',
           'region' => 'content',
           'weight' => '-41',
         ),
@@ -312,20 +64,59 @@ function sr_core_context_default_contexts() {
         ),
       ),
     ),
+    'debug' => array(
+      'debug' => 1,
+    ),
   );
   $context->condition_mode = 0;
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('About');
+  t('About - active');
   t('about');
   $export['about'] = $context;
 
-  $context = new stdClass;
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'advertise';
+  $context->description = 'advertising page - active';
+  $context->tag = 'advertise';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'support/advertise' => 'support/advertise',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'boxes-ad_sponsorship_inquiry_link' => array(
+          'module' => 'boxes',
+          'delta' => 'ad_sponsorship_inquiry_link',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+    'debug' => array(
+      'debug' => 1,
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('advertise');
+  t('advertising page - active');
+  $export['advertise'] = $context;
+
+  $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'advocacy';
-  $context->description = 'Advocacy Page';
+  $context->description = 'Advocacy Page - active';
   $context->tag = 'advocacy';
   $context->conditions = array(
     'path' => array(
@@ -336,30 +127,23 @@ function sr_core_context_default_contexts() {
     ),
   );
   $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'views-advocacy-block_1' => array(
-          'module' => 'views',
-          'delta' => 'advocacy-block_1',
-          'region' => 'content',
-          'weight' => '-10',
-        ),
-      ),
+    'debug' => array(
+      'debug' => 1,
     ),
   );
   $context->condition_mode = 0;
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Advocacy Page');
+  t('Advocacy Page - active');
   t('advocacy');
   $export['advocacy'] = $context;
 
-  $context = new stdClass;
+  $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'clone_of_sponsors';
-  $context->description = 'sponsor page';
+  $context->description = 'sponsor page - legacy testing DELETE';
   $context->tag = 'sponsors';
   $context->conditions = array(
     'path' => array(
@@ -391,20 +175,111 @@ function sr_core_context_default_contexts() {
         ),
       ),
     ),
+    'debug' => array(
+      'debug' => 1,
+    ),
   );
   $context->condition_mode = 0;
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('sponsor page');
+  t('sponsor page - legacy testing DELETE');
   t('sponsors');
-  $export['clone_of_Sponsors'] = $context;
+  $export['clone_of_sponsors'] = $context;
 
-  $context = new stdClass;
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'contact';
+  $context->description = 'contact page - sidebar links - active';
+  $context->tag = 'contact page';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'contact' => 'contact',
+        'node/36' => 'node/36',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'menu-menu-contact-menu' => array(
+          'module' => 'menu',
+          'delta' => 'menu-contact-menu',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+    'debug' => array(
+      'debug' => 1,
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('contact page');
+  t('contact page - sidebar links - active');
+  $export['contact'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'guide';
+  $context->description = 'resource guide - active';
+  $context->tag = 'resourceguide';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'about/resourceguide' => 'about/resourceguide',
+        'about/resourceguide/*' => 'about/resourceguide/*',
+        'about/work/resourceguide' => 'about/work/resourceguide',
+        'about/work/resourceguide/*' => 'about/work/resourceguide/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'boxes-resource_guide_link' => array(
+          'module' => 'boxes',
+          'delta' => 'resource_guide_link',
+          'region' => 'content',
+          'weight' => '1',
+        ),
+        'views-5680bc3d9b7c54f5cd332ecbf62b6f4e' => array(
+          'module' => 'views',
+          'delta' => '5680bc3d9b7c54f5cd332ecbf62b6f4e',
+          'region' => 'content',
+          'weight' => '4',
+        ),
+        'menu-menu-resource-guide' => array(
+          'module' => 'menu',
+          'delta' => 'menu-resource-guide',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+    'debug' => array(
+      'debug' => 1,
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('resource guide - active');
+  t('resourceguide');
+  $export['guide'] = $context;
+
+  $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'home';
-  $context->description = 'homepage';
+  $context->description = 'homepage - active';
   $context->tag = 'home';
   $context->conditions = array(
     'path' => array(
@@ -416,9 +291,9 @@ function sr_core_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'rotating_banner-1' => array(
+        'rotating_banner-16' => array(
           'module' => 'rotating_banner',
-          'delta' => 1,
+          'delta' => '16',
           'region' => 'content',
           'weight' => '-10',
         ),
@@ -484,20 +359,110 @@ function sr_core_context_default_contexts() {
         ),
       ),
     ),
+    'debug' => array(
+      'debug' => 1,
+    ),
   );
   $context->condition_mode = 0;
 
   // Translatables
   // Included for use with string extractors like potx.
   t('home');
-  t('homepage');
+  t('homepage - active');
   $export['home'] = $context;
 
-  $context = new stdClass;
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'news';
+  $context->description = 'News - legacy get rid of (feed on node 53 sidebar only) ';
+  $context->tag = 'news';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'node/53' => 'node/53',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'aggregator-feed-1' => array(
+          'module' => 'aggregator',
+          'delta' => 'feed-1',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+    'debug' => array(
+      'debug' => 1,
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('News - legacy get rid of (feed on node 53 sidebar only) ');
+  t('news');
+  $export['news'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'newspaper';
+  $context->description = 'Newspaper - active ';
+  $context->tag = 'newspaper';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'about/newspaper' => 'about/newspaper',
+        'about/newspaper/*' => 'about/newspaper/*',
+        'about/work/newspaper' => 'about/work/newspaper',
+        'about/work/newspaper/*' => 'about/work/newspaper/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'boxes-news_site_link' => array(
+          'module' => 'boxes',
+          'delta' => 'news_site_link',
+          'region' => 'content',
+          'weight' => '1',
+        ),
+        'aggregator-feed-1' => array(
+          'module' => 'aggregator',
+          'delta' => 'feed-1',
+          'region' => 'content',
+          'weight' => '5',
+        ),
+        'menu-menu-newsmenu' => array(
+          'module' => 'menu',
+          'delta' => 'menu-newsmenu',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+    'debug' => array(
+      'debug' => 1,
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Newspaper - active ');
+  t('newspaper');
+  $export['newspaper'] = $context;
+
+  $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'sitewide';
-  $context->description = 'Sitewide blocks';
+  $context->description = 'Sitewide blocks - active';
   $context->tag = 'sitewide';
   $context->conditions = array(
     'path' => array(
@@ -565,14 +530,248 @@ function sr_core_context_default_contexts() {
         ),
       ),
     ),
+    'debug' => array(
+      'debug' => 1,
+    ),
   );
   $context->condition_mode = 1;
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Sitewide blocks');
+  t('Sitewide blocks - active');
   t('sitewide');
   $export['sitewide'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'sponsor';
+  $context->description = 'become a sponsor - active';
+  $context->tag = 'sponsor';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'support/sponsor' => 'support/sponsor',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'boxes-ad_sponsorship_inquiry_link' => array(
+          'module' => 'boxes',
+          'delta' => 'ad_sponsorship_inquiry_link',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+        'boxes-see_our_friends_and_supporters' => array(
+          'module' => 'boxes',
+          'delta' => 'see_our_friends_and_supporters',
+          'region' => 'content',
+          'weight' => '-9',
+        ),
+        'views-6b8b5c3b63dc13e1c65f06ceced8ba44' => array(
+          'module' => 'views',
+          'delta' => '6b8b5c3b63dc13e1c65f06ceced8ba44',
+          'region' => 'content',
+          'weight' => '-8',
+        ),
+      ),
+    ),
+    'debug' => array(
+      'debug' => 1,
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('become a sponsor - active');
+  t('sponsor');
+  $export['sponsor'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'sponsors';
+  $context->description = 'sponsor page - list of sponsors - active';
+  $context->tag = 'sponsors';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'support/sponsors' => 'support/sponsors',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-59680aa9e208549fe20d219cd09513ec' => array(
+          'module' => 'views',
+          'delta' => '59680aa9e208549fe20d219cd09513ec',
+          'region' => 'content',
+          'weight' => '-43',
+        ),
+        'views-1b1fbd4d1b1528c39fbc243b6194d267' => array(
+          'module' => 'views',
+          'delta' => '1b1fbd4d1b1528c39fbc243b6194d267',
+          'region' => 'content',
+          'weight' => '-42',
+        ),
+        'views-8f2b59290f2b9af8d04e72021d5e240d' => array(
+          'module' => 'views',
+          'delta' => '8f2b59290f2b9af8d04e72021d5e240d',
+          'region' => 'content',
+          'weight' => '-41',
+        ),
+        'views-ffbc48b22349ac130a42162c0868f543' => array(
+          'module' => 'views',
+          'delta' => 'ffbc48b22349ac130a42162c0868f543',
+          'region' => 'content',
+          'weight' => '-40',
+        ),
+        'views-63b4d486f75c67e3aa42f2072bc15339' => array(
+          'module' => 'views',
+          'delta' => '63b4d486f75c67e3aa42f2072bc15339',
+          'region' => 'content',
+          'weight' => '-39',
+        ),
+        'views-community_partners-block_1' => array(
+          'module' => 'views',
+          'delta' => 'community_partners-block_1',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+    'debug' => array(
+      'debug' => 1,
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('sponsor page - list of sponsors - active');
+  t('sponsors');
+  $export['sponsors'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'support_global';
+  $context->description = 'support global blocks - active';
+  $context->tag = 'support_global';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'support' => 'support',
+        'support/*' => 'support/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'boxes-see_our_friends_and_supporters' => array(
+          'module' => 'boxes',
+          'delta' => 'see_our_friends_and_supporters',
+          'region' => 'content',
+          'weight' => '-9',
+        ),
+        'menu-menu-support-menu' => array(
+          'module' => 'menu',
+          'delta' => 'menu-support-menu',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+    'debug' => array(
+      'debug' => 1,
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('support global blocks - active');
+  t('support_global');
+  $export['support_global'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'vendor_global';
+  $context->description = 'vendor global context (sidebar menu) - active';
+  $context->tag = 'vendor global';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'about/work/vendor/*' => 'about/work/vendor/*',
+        'about/people/vendors' => 'about/people/vendors',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'menu-menu-vendor-program' => array(
+          'module' => 'menu',
+          'delta' => 'menu-vendor-program',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+    'debug' => array(
+      'debug' => 1,
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('vendor global');
+  t('vendor global context (sidebar menu) - active');
+  $export['vendor_global'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'volunteer';
+  $context->description = 'volunteer - active';
+  $context->tag = 'volunteer';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'support/volunteer' => 'support/volunteer',
+        'volunteer' => 'volunteer',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-volunteer_opportunities-block_1' => array(
+          'module' => 'views',
+          'delta' => 'volunteer_opportunities-block_1',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+    'debug' => array(
+      'debug' => 1,
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('volunteer');
+  t('volunteer - active');
+  $export['volunteer'] = $context;
 
   return $export;
 }

@@ -10,7 +10,7 @@
 function sr_core_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-advocacy_campaign-body'
+  // Exported field: 'node-advocacy_campaign-body'.
   $fields['node-advocacy_campaign-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -33,6 +33,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '1',
@@ -84,7 +85,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-advocacy_campaign-field_campaign_action'
+  // Exported field: 'node-advocacy_campaign-field_campaign_action'.
   $fields['node-advocacy_campaign-field_campaign_action'] = array(
     'field_config' => array(
       'active' => '1',
@@ -94,6 +95,7 @@ function sr_core_field_default_fields() {
       'field_name' => 'field_campaign_action',
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'link',
       'settings' => array(
         'attributes' => array(
@@ -139,6 +141,7 @@ function sr_core_field_default_fields() {
       'label' => 'Take action now!',
       'required' => 0,
       'settings' => array(
+        'absolute_url' => 1,
         'attributes' => array(
           'class' => '',
           'rel' => '',
@@ -149,6 +152,7 @@ function sr_core_field_default_fields() {
         ),
         'enable_tokens' => 1,
         'title' => 'optional',
+        'title_label_use_field_label' => FALSE,
         'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
@@ -165,7 +169,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-advocacy_campaign-field_campaign_files'
+  // Exported field: 'node-advocacy_campaign-field_campaign_files'.
   $fields['node-advocacy_campaign-field_campaign_files'] = array(
     'field_config' => array(
       'active' => '1',
@@ -186,6 +190,7 @@ function sr_core_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'file',
       'settings' => array(
         'display_default' => 1,
@@ -230,6 +235,7 @@ function sr_core_field_default_fields() {
         'module' => 'file',
         'settings' => array(
           'insert' => 0,
+          'insert_absolute' => FALSE,
           'insert_class' => '',
           'insert_default' => 'auto',
           'insert_styles' => array(
@@ -252,7 +258,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-advocacy_campaign-field_campaign_getinvolved'
+  // Exported field: 'node-advocacy_campaign-field_campaign_getinvolved'.
   $fields['node-advocacy_campaign-field_campaign_getinvolved'] = array(
     'field_config' => array(
       'active' => '1',
@@ -273,6 +279,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '1',
@@ -318,7 +325,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-advocacy_campaign-field_campaign_image'
+  // Exported field: 'node-advocacy_campaign-field_campaign_image'.
   $fields['node-advocacy_campaign-field_campaign_image'] = array(
     'field_config' => array(
       'active' => '1',
@@ -339,6 +346,7 @@ function sr_core_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
@@ -375,6 +383,7 @@ function sr_core_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
+        'default_image' => 0,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -388,6 +397,7 @@ function sr_core_field_default_fields() {
         'module' => 'image',
         'settings' => array(
           'insert' => 0,
+          'insert_absolute' => FALSE,
           'insert_class' => '',
           'insert_default' => 'image_medium',
           'insert_styles' => array(
@@ -411,7 +421,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-advocacy_campaign-field_campaign_partners'
+  // Exported field: 'node-advocacy_campaign-field_campaign_partners'.
   $fields['node-advocacy_campaign-field_campaign_partners'] = array(
     'field_config' => array(
       'active' => '1',
@@ -432,6 +442,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '1',
@@ -477,7 +488,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-advocacy_campaign-field_campaign_resources'
+  // Exported field: 'node-advocacy_campaign-field_campaign_resources'.
   $fields['node-advocacy_campaign-field_campaign_resources'] = array(
     'field_config' => array(
       'active' => '1',
@@ -498,6 +509,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '1',
@@ -543,7 +555,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-advocacy_campaign-field_campaign_type'
+  // Exported field: 'node-advocacy_campaign-field_campaign_type'.
   $fields['node-advocacy_campaign-field_campaign_type'] = array(
     'field_config' => array(
       'active' => '1',
@@ -564,6 +576,7 @@ function sr_core_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -583,7 +596,7 @@ function sr_core_field_default_fields() {
       'description' => 'Please select the category that this Advocacy Campaign focuses on',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
+          'label' => 'inline',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
@@ -613,7 +626,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-advocacy_campaign-field_campaign_updates'
+  // Exported field: 'node-advocacy_campaign-field_campaign_updates'.
   $fields['node-advocacy_campaign-field_campaign_updates'] = array(
     'field_config' => array(
       'active' => '1',
@@ -634,6 +647,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '1',
@@ -679,7 +693,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-announcement-body'
+  // Exported field: 'node-announcement-body'.
   $fields['node-announcement-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -702,6 +716,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '1',
@@ -752,7 +767,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-announcement-field_announcement_image'
+  // Exported field: 'node-announcement-field_announcement_image'.
   $fields['node-announcement-field_announcement_image'] = array(
     'field_config' => array(
       'active' => '1',
@@ -773,6 +788,7 @@ function sr_core_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
@@ -809,6 +825,7 @@ function sr_core_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 1,
+        'default_image' => 0,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -822,6 +839,7 @@ function sr_core_field_default_fields() {
         'module' => 'image',
         'settings' => array(
           'insert' => 0,
+          'insert_absolute' => FALSE,
           'insert_class' => '',
           'insert_default' => 'auto',
           'insert_styles' => array(
@@ -851,7 +869,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-page-body'
+  // Exported field: 'node-page-body'.
   $fields['node-page-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -874,6 +892,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '1',
@@ -924,7 +943,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-page-field_page_file'
+  // Exported field: 'node-page-field_page_file'.
   $fields['node-page-field_page_file'] = array(
     'field_config' => array(
       'active' => '1',
@@ -945,6 +964,7 @@ function sr_core_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'file',
       'settings' => array(
         'display_default' => 0,
@@ -980,7 +1000,7 @@ function sr_core_field_default_fields() {
       'settings' => array(
         'description_field' => 1,
         'file_directory' => '',
-        'file_extensions' => 'txt pdf doc docx xls xlsx xlsm pptx pptm docm',
+        'file_extensions' => 'txt pdf doc docx xls xlsx xlsm pptx pptm docm jpg',
         'max_filesize' => '',
         'user_register_form' => FALSE,
       ),
@@ -989,11 +1009,17 @@ function sr_core_field_default_fields() {
         'module' => 'file',
         'settings' => array(
           'insert' => 0,
+          'insert_absolute' => FALSE,
           'insert_class' => '',
           'insert_default' => 'auto',
           'insert_styles' => array(
             'auto' => 'auto',
             'image' => 0,
+            'image_150tall' => 0,
+            'image_150wide' => 0,
+            'image_200wide' => 0,
+            'image_320wide' => 0,
+            'image_content_third' => 0,
             'image_gallery' => 0,
             'image_galleryformatter_slide' => 0,
             'image_galleryformatter_thumb' => 0,
@@ -1001,7 +1027,10 @@ function sr_core_field_default_fields() {
             'image_medium' => 0,
             'image_sponsor_logo' => 0,
             'image_square_thumbnail' => 0,
+            'image_third' => 0,
             'image_thumbnail' => 0,
+            'image_twothirds' => 0,
+            'image_vendor_photo_gallery' => 0,
             'link' => 0,
           ),
           'insert_width' => '',
@@ -1013,7 +1042,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-page-field_page_image'
+  // Exported field: 'node-page-field_page_image'.
   $fields['node-page-field_page_image'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1034,6 +1063,7 @@ function sr_core_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
@@ -1070,6 +1100,7 @@ function sr_core_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 1,
+        'default_image' => 0,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -1083,6 +1114,7 @@ function sr_core_field_default_fields() {
         'module' => 'image',
         'settings' => array(
           'insert' => 0,
+          'insert_absolute' => FALSE,
           'insert_class' => '',
           'insert_default' => 'image_320wide',
           'insert_styles' => array(
@@ -1112,7 +1144,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-photo_gallery-body'
+  // Exported field: 'node-photo_gallery-body'.
   $fields['node-photo_gallery-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1135,6 +1167,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '1',
@@ -1186,7 +1219,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-photo_gallery-field_gallery_photos'
+  // Exported field: 'node-photo_gallery-field_gallery_photos'.
   $fields['node-photo_gallery-field_gallery_photos'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1207,6 +1240,7 @@ function sr_core_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
@@ -1226,6 +1260,7 @@ function sr_core_field_default_fields() {
           'settings' => array(
             'link_to_full' => 1,
             'link_to_full_style' => 'vendor_photo_gallery',
+            'linking_method' => 'show_full_link',
             'modal' => 'none',
             'slide_style' => 'vendor_photo_gallery',
             'style' => 'Greenarrows',
@@ -1247,6 +1282,7 @@ function sr_core_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 1,
+        'default_image' => 0,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -1260,6 +1296,7 @@ function sr_core_field_default_fields() {
         'module' => 'image',
         'settings' => array(
           'insert' => 0,
+          'insert_absolute' => FALSE,
           'insert_class' => '',
           'insert_default' => 'auto',
           'insert_styles' => array(
@@ -1287,7 +1324,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-photo_gallery-field_vendor_gallery'
+  // Exported field: 'node-photo_gallery-field_vendor_gallery'.
   $fields['node-photo_gallery-field_vendor_gallery'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1301,6 +1338,7 @@ function sr_core_field_default_fields() {
           0 => 'value',
         ),
       ),
+      'locked' => '0',
       'module' => 'list',
       'settings' => array(
         'allowed_values' => array(
@@ -1348,7 +1386,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-profile-body'
+  // Exported field: 'node-profile-body'.
   $fields['node-profile-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1371,6 +1409,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '1',
@@ -1422,7 +1461,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-profile-field_profile_contact'
+  // Exported field: 'node-profile-field_profile_contact'.
   $fields['node-profile-field_profile_contact'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1443,6 +1482,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '60',
@@ -1490,7 +1530,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-profile-field_profile_internal_notes'
+  // Exported field: 'node-profile-field_profile_internal_notes'.
   $fields['node-profile-field_profile_internal_notes'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1511,6 +1551,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '1',
@@ -1555,7 +1596,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-profile-field_profile_org_website'
+  // Exported field: 'node-profile-field_profile_org_website'.
   $fields['node-profile-field_profile_org_website'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1565,6 +1606,7 @@ function sr_core_field_default_fields() {
       'field_name' => 'field_profile_org_website',
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'link',
       'settings' => array(
         'attributes' => array(
@@ -1609,6 +1651,7 @@ function sr_core_field_default_fields() {
       'label' => 'Organization and Website',
       'required' => 0,
       'settings' => array(
+        'absolute_url' => 1,
         'attributes' => array(
           'class' => '',
           'rel' => '',
@@ -1619,6 +1662,7 @@ function sr_core_field_default_fields() {
         ),
         'enable_tokens' => 1,
         'title' => 'optional',
+        'title_label_use_field_label' => FALSE,
         'title_maxlength' => 128,
         'title_value' => '',
         'url' => 'optional',
@@ -1635,7 +1679,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-profile-field_profile_photo'
+  // Exported field: 'node-profile-field_profile_photo'.
   $fields['node-profile-field_profile_photo'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1656,6 +1700,7 @@ function sr_core_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => '65',
@@ -1692,6 +1737,7 @@ function sr_core_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 1,
+        'default_image' => 0,
         'file_directory' => 'profilephotos',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -1705,6 +1751,7 @@ function sr_core_field_default_fields() {
         'module' => 'image',
         'settings' => array(
           'insert' => 0,
+          'insert_absolute' => FALSE,
           'insert_class' => '',
           'insert_default' => 'image_square_thumbnail',
           'insert_styles' => array(
@@ -1730,7 +1777,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-profile-field_profile_position'
+  // Exported field: 'node-profile-field_profile_position'.
   $fields['node-profile-field_profile_position'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1751,6 +1798,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '75',
@@ -1798,7 +1846,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-profile-field_relationship'
+  // Exported field: 'node-profile-field_relationship'.
   $fields['node-profile-field_relationship'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1819,6 +1867,7 @@ function sr_core_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -1868,7 +1917,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-sponsor-body'
+  // Exported field: 'node-sponsor-body'.
   $fields['node-sponsor-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1891,6 +1940,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '1',
@@ -1941,7 +1991,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-sponsor-field_resource_sponsor'
+  // Exported field: 'node-sponsor-field_resource_sponsor'.
   $fields['node-sponsor-field_resource_sponsor'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1955,6 +2005,7 @@ function sr_core_field_default_fields() {
           0 => 'value',
         ),
       ),
+      'locked' => '0',
       'module' => 'list',
       'settings' => array(
         'allowed_values' => array(
@@ -2002,7 +2053,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-sponsor-field_sponsor_level'
+  // Exported field: 'node-sponsor-field_sponsor_level'.
   $fields['node-sponsor-field_sponsor_level'] = array(
     'field_config' => array(
       'active' => '1',
@@ -2023,6 +2074,7 @@ function sr_core_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -2042,7 +2094,7 @@ function sr_core_field_default_fields() {
       'description' => 'Please choose the level for the sponsor based on the value of the sponsorship.',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
@@ -2072,7 +2124,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-sponsor-field_sponsor_logo'
+  // Exported field: 'node-sponsor-field_sponsor_logo'.
   $fields['node-sponsor-field_sponsor_logo'] = array(
     'field_config' => array(
       'active' => '1',
@@ -2093,6 +2145,7 @@ function sr_core_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
@@ -2107,7 +2160,7 @@ function sr_core_field_default_fields() {
       'description' => 'Please upload the sponsor logo. Logos will be resized to form a square, so sponsors with non-square logos may want to adjust them to look better as a square image before submitting.',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
             'image_link' => 'content',
@@ -2129,6 +2182,7 @@ function sr_core_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
+        'default_image' => 0,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -2142,6 +2196,7 @@ function sr_core_field_default_fields() {
         'module' => 'image',
         'settings' => array(
           'insert' => 0,
+          'insert_absolute' => FALSE,
           'insert_class' => '',
           'insert_default' => 'image_sponsor_logo',
           'insert_styles' => array(
@@ -2165,7 +2220,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-sponsor-field_sponsor_website'
+  // Exported field: 'node-sponsor-field_sponsor_website'.
   $fields['node-sponsor-field_sponsor_website'] = array(
     'field_config' => array(
       'active' => '1',
@@ -2175,6 +2230,7 @@ function sr_core_field_default_fields() {
       'field_name' => 'field_sponsor_website',
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'link',
       'settings' => array(
         'attributes' => array(
@@ -2201,7 +2257,7 @@ function sr_core_field_default_fields() {
       'description' => 'Please enter the name of the Sponsor in Title and the URL of their website in URL. It is important to copy and paste the URL (rather than typing it in) to prevent broken links. URL must begin with <code>http://</code> (which will happen if it\'s copied and pasted).',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
@@ -2219,6 +2275,7 @@ function sr_core_field_default_fields() {
       'label' => 'Sponsor website',
       'required' => 0,
       'settings' => array(
+        'absolute_url' => 1,
         'attributes' => array(
           'class' => '',
           'rel' => '',
@@ -2229,6 +2286,7 @@ function sr_core_field_default_fields() {
         ),
         'enable_tokens' => 1,
         'title' => 'optional',
+        'title_label_use_field_label' => FALSE,
         'title_maxlength' => 128,
         'title_value' => '',
         'url' => 'optional',
@@ -2245,7 +2303,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-testimonial-body'
+  // Exported field: 'node-testimonial-body'.
   $fields['node-testimonial-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -2268,6 +2326,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '1',
@@ -2319,7 +2378,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-testimonial-field_testimonial_name'
+  // Exported field: 'node-testimonial-field_testimonial_name'.
   $fields['node-testimonial-field_testimonial_name'] = array(
     'field_config' => array(
       'active' => '1',
@@ -2340,6 +2399,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '150',
@@ -2387,7 +2447,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-vendor_profile-body'
+  // Exported field: 'node-vendor_profile-body'.
   $fields['node-vendor_profile-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -2410,6 +2470,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '1',
@@ -2461,7 +2522,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-vendor_profile-field_vendor_author'
+  // Exported field: 'node-vendor_profile-field_vendor_author'.
   $fields['node-vendor_profile-field_vendor_author'] = array(
     'field_config' => array(
       'active' => '1',
@@ -2482,6 +2543,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '75',
@@ -2529,7 +2591,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-vendor_profile-field_vendor_photo'
+  // Exported field: 'node-vendor_profile-field_vendor_photo'.
   $fields['node-vendor_profile-field_vendor_photo'] = array(
     'field_config' => array(
       'active' => '1',
@@ -2550,6 +2612,7 @@ function sr_core_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => '11',
@@ -2590,6 +2653,7 @@ function sr_core_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 1,
+        'default_image' => 0,
         'file_directory' => 'vendorprofile',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -2603,6 +2667,7 @@ function sr_core_field_default_fields() {
         'module' => 'image',
         'settings' => array(
           'insert' => 0,
+          'insert_absolute' => FALSE,
           'insert_class' => '',
           'insert_default' => 'image_medium',
           'insert_styles' => array(
@@ -2625,7 +2690,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-vendor_profile-field_vendor_profile_published'
+  // Exported field: 'node-vendor_profile-field_vendor_profile_published'.
   $fields['node-vendor_profile-field_vendor_profile_published'] = array(
     'field_config' => array(
       'active' => '1',
@@ -2646,6 +2711,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '10',
@@ -2693,7 +2759,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-volunteer_job_description-body'
+  // Exported field: 'node-volunteer_job_description-body'.
   $fields['node-volunteer_job_description-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -2716,6 +2782,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '1',
@@ -2767,7 +2834,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-volunteer_job_description-field_volop_apply'
+  // Exported field: 'node-volunteer_job_description-field_volop_apply'.
   $fields['node-volunteer_job_description-field_volop_apply'] = array(
     'field_config' => array(
       'active' => '1',
@@ -2777,6 +2844,7 @@ function sr_core_field_default_fields() {
       'field_name' => 'field_volop_apply',
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'link',
       'settings' => array(
         'attributes' => array(
@@ -2812,7 +2880,7 @@ function sr_core_field_default_fields() {
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => 4,
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2826,6 +2894,7 @@ function sr_core_field_default_fields() {
       'label' => 'Volunteer Application',
       'required' => 0,
       'settings' => array(
+        'absolute_url' => 1,
         'attributes' => array(
           'class' => '',
           'configurable_title' => 0,
@@ -2838,6 +2907,7 @@ function sr_core_field_default_fields() {
         ),
         'enable_tokens' => 1,
         'title' => 'value',
+        'title_label_use_field_label' => FALSE,
         'title_maxlength' => 128,
         'title_value' => 'Submit a volunteer application online',
         'url' => 0,
@@ -2854,7 +2924,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-volunteer_job_description-field_volop_commitment'
+  // Exported field: 'node-volunteer_job_description-field_volop_commitment'.
   $fields['node-volunteer_job_description-field_volop_commitment'] = array(
     'field_config' => array(
       'active' => '1',
@@ -2875,6 +2945,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
@@ -2893,7 +2964,7 @@ function sr_core_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 3,
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2921,7 +2992,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-volunteer_job_description-field_volop_hours'
+  // Exported field: 'node-volunteer_job_description-field_volop_hours'.
   $fields['node-volunteer_job_description-field_volop_hours'] = array(
     'field_config' => array(
       'active' => '1',
@@ -2942,6 +3013,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '250',
@@ -2960,7 +3032,7 @@ function sr_core_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '2',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2989,7 +3061,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-volunteer_job_description-field_volop_location'
+  // Exported field: 'node-volunteer_job_description-field_volop_location'.
   $fields['node-volunteer_job_description-field_volop_location'] = array(
     'field_config' => array(
       'active' => '1',
@@ -3010,6 +3082,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
@@ -3057,7 +3130,7 @@ function sr_core_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-webform-body'
+  // Exported field: 'node-webform-body'.
   $fields['node-webform-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -3080,6 +3153,7 @@ function sr_core_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '1',
