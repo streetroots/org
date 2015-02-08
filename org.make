@@ -87,10 +87,3 @@ projects[wysiwyg][version] = "2.2"
 ; Themes
 projects[omega][version] = "3.0"
 
-; Modules
-; Please fill the following out. Type may be one of get, git, bzr or svn,
-; and url is the url of the download.
-projects[sr_core][download][type] = ""
-projects[sr_core][download][url] = ""
-projects[sr_core][type] = "module"
-
