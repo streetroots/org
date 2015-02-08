@@ -78,19 +78,47 @@ variables[pathauto_node_pattern] = ''
 ;
 ; Nodes
 ;
-;; About page.
-;nodes[about][type] = page
-;nodes[about][title] = About
-;nodes[about][body][und][0][value] = PLACEHOLDER
-;nodes[about][body][und][0][format] = full_html
-;nodes[about][uid] = 1
-;nodes[about][language] = und
-;nodes[about][menu][enabled] = 1
-;nodes[about][menu][link_title] = About
-;nodes[about][menu][menu_name] = main-menu
-;nodes[about][menu][weight] = 0
-;nodes[about][path][alias] = about
-;nodes[about][path][pathauto] = 0
+; About page.
+nodes[about][type] = page
+nodes[about][title] = About
+nodes[about][body][und][0][value] = PLACEHOLDER
+nodes[about][body][und][0][format] = full_html
+nodes[about][uid] = 1
+nodes[about][language] = und
+nodes[about][menu][enabled] = 1
+nodes[about][menu][link_title] = About
+nodes[about][menu][menu_name] = main-menu
+nodes[about][menu][weight] = 0
+nodes[about][path][alias] = about
+nodes[about][path][pathauto] = 0
+
+; Support page.
+nodes[support][type] = page
+nodes[support][title] = Support
+nodes[support][body][und][0][value] = PLACEHOLDER
+nodes[support][body][und][0][format] = full_html
+nodes[support][uid] = 1
+nodes[support][language] = und
+nodes[support][menu][enabled] = 1
+nodes[support][menu][link_title] = Support
+nodes[support][menu][menu_name] = main-menu
+nodes[support][menu][weight] = 0
+nodes[support][path][alias] = support
+nodes[support][path][pathauto] = 0
+
+; Contact page.
+nodes[contact][type] = page
+nodes[contact][title] = Contact
+nodes[contact][body][und][0][value] = PLACEHOLDER
+nodes[contact][body][und][0][format] = full_html
+nodes[contact][uid] = 1
+nodes[contact][language] = und
+nodes[contact][menu][enabled] = 1
+nodes[contact][menu][link_title] = Contact
+nodes[contact][menu][menu_name] = main-menu
+nodes[contact][menu][weight] = 0
+nodes[contact][path][alias] = contact
+nodes[contact][path][pathauto] = 0
 
 ; Contact Us Webform
 ;nodes[contact_form][type] = webform
