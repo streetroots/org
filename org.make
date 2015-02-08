@@ -92,7 +92,7 @@ projects[wysiwyg][version] = "2.2"
 
 ; Themes
 projects[omega][subdir] = "contrib"
-projects[omega][version] = "4.0"
+projects[omega][version] = "4.3"
 
 ; Profiler
 libraries[profiler][download][type] = "git"
