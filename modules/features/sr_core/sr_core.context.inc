@@ -64,9 +64,6 @@ function sr_core_context_default_contexts() {
         ),
       ),
     ),
-    'debug' => array(
-      'debug' => 1,
-    ),
   );
   $context->condition_mode = 0;
 
@@ -100,9 +97,6 @@ function sr_core_context_default_contexts() {
         ),
       ),
     ),
-    'debug' => array(
-      'debug' => 1,
-    ),
   );
   $context->condition_mode = 0;
 
@@ -126,11 +120,7 @@ function sr_core_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array(
-    'debug' => array(
-      'debug' => 1,
-    ),
-  );
+  $context->reactions = array();
   $context->condition_mode = 0;
 
   // Translatables
@@ -212,9 +202,6 @@ function sr_core_context_default_contexts() {
         ),
       ),
     ),
-    'debug' => array(
-      'debug' => 1,
-    ),
   );
   $context->condition_mode = 0;
 
@@ -262,9 +249,6 @@ function sr_core_context_default_contexts() {
           'weight' => '-9',
         ),
       ),
-    ),
-    'debug' => array(
-      'debug' => 1,
     ),
   );
   $context->condition_mode = 0;
@@ -359,9 +343,6 @@ function sr_core_context_default_contexts() {
         ),
       ),
     ),
-    'debug' => array(
-      'debug' => 1,
-    ),
   );
   $context->condition_mode = 0;
 
@@ -446,9 +427,6 @@ function sr_core_context_default_contexts() {
         ),
       ),
     ),
-    'debug' => array(
-      'debug' => 1,
-    ),
   );
   $context->condition_mode = 0;
 
@@ -530,9 +508,6 @@ function sr_core_context_default_contexts() {
         ),
       ),
     ),
-    'debug' => array(
-      'debug' => 1,
-    ),
   );
   $context->condition_mode = 1;
 
@@ -577,9 +552,6 @@ function sr_core_context_default_contexts() {
           'weight' => '-8',
         ),
       ),
-    ),
-    'debug' => array(
-      'debug' => 1,
     ),
   );
   $context->condition_mode = 0;
@@ -644,9 +616,6 @@ function sr_core_context_default_contexts() {
         ),
       ),
     ),
-    'debug' => array(
-      'debug' => 1,
-    ),
   );
   $context->condition_mode = 0;
 
@@ -687,9 +656,6 @@ function sr_core_context_default_contexts() {
         ),
       ),
     ),
-    'debug' => array(
-      'debug' => 1,
-    ),
   );
   $context->condition_mode = 0;
 
@@ -724,9 +690,6 @@ function sr_core_context_default_contexts() {
         ),
       ),
     ),
-    'debug' => array(
-      'debug' => 1,
-    ),
   );
   $context->condition_mode = 0;
 
@@ -760,9 +723,6 @@ function sr_core_context_default_contexts() {
           'weight' => '-10',
         ),
       ),
-    ),
-    'debug' => array(
-      'debug' => 1,
     ),
   );
   $context->condition_mode = 0;

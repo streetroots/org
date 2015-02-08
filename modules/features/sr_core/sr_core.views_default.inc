@@ -1501,6 +1501,169 @@ function sr_core_views_default_views() {
   $export['our_people'] = $view;
 
   $view = new view();
+  $view->name = 'resourceguide_sponsors';
+  $view->description = 'resourceguide_sponsors';
+  $view->tag = 'resourceguide_sponsors';
+  $view->base_table = 'node';
+  $view->human_name = 'resourceguide_sponsors';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Defaults */
+  $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->display->display_options['title'] = 'Resource Guide Sponsors';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '0';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Sponsor logo */
+  $handler->display->display_options['fields']['entity_id']['id'] = 'entity_id';
+  $handler->display->display_options['fields']['entity_id']['table'] = 'field_data_field_sponsor_logo';
+  $handler->display->display_options['fields']['entity_id']['field'] = 'field_sponsor_logo';
+  $handler->display->display_options['fields']['entity_id']['label'] = '';
+  $handler->display->display_options['fields']['entity_id']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['entity_id']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['entity_id']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => 'content',
+  );
+  /* Filter criterion: Content: Published or admin */
+  $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
+  $handler->display->display_options['filters']['status_extra']['table'] = 'node';
+  $handler->display->display_options['filters']['status_extra']['field'] = 'status_extra';
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'sponsor' => 'sponsor',
+  );
+  /* Filter criterion: Content: Is this a Resource Guide sponsor? (field_resource_sponsor) */
+  $handler->display->display_options['filters']['field_resource_sponsor_value']['id'] = 'field_resource_sponsor_value';
+  $handler->display->display_options['filters']['field_resource_sponsor_value']['table'] = 'field_data_field_resource_sponsor';
+  $handler->display->display_options['filters']['field_resource_sponsor_value']['field'] = 'field_resource_sponsor_value';
+  $handler->display->display_options['filters']['field_resource_sponsor_value']['value'] = array(
+    'Yes' => 'Yes',
+  );
+  $handler->display->display_options['filters']['field_resource_sponsor_value']['group'] = '0';
+
+  /* Display: Resource Guide Sponsors Block */
+  $handler = $view->new_display('block', 'Resource Guide Sponsors Block', 'resourceguide_sponsors');
+  $handler->display->display_options['display_description'] = 'Resource Guide Sponsors Block';
+  $translatables['resourceguide_sponsors'] = array(
+    t('Defaults'),
+    t('Resource Guide Sponsors'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('Resource Guide Sponsors Block'),
+  );
+  $export['resourceguide_sponsors'] = $view;
+
+  $view = new view();
+  $view->name = 'sponsors_by_level';
+  $view->description = 'sponsors_by_level';
+  $view->tag = 'sponsors_by_level';
+  $view->base_table = 'node';
+  $view->human_name = 'sponsors_by_level';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Defaults */
+  $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['group_by'] = TRUE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '0';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Sponsor logo */
+  $handler->display->display_options['fields']['entity_id']['id'] = 'entity_id';
+  $handler->display->display_options['fields']['entity_id']['table'] = 'field_data_field_sponsor_logo';
+  $handler->display->display_options['fields']['entity_id']['field'] = 'field_sponsor_logo';
+  $handler->display->display_options['fields']['entity_id']['label'] = '';
+  $handler->display->display_options['fields']['entity_id']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['entity_id']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['entity_id']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => 'content',
+  );
+  /* Sort criterion: Taxonomy term: Term ID */
+  $handler->display->display_options['sorts']['tid']['id'] = 'tid';
+  $handler->display->display_options['sorts']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['tid']['field'] = 'tid';
+  /* Filter criterion: Content: Published or admin */
+  $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
+  $handler->display->display_options['filters']['status_extra']['table'] = 'node';
+  $handler->display->display_options['filters']['status_extra']['field'] = 'status_extra';
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'sponsor' => 'sponsor',
+  );
+  /* Filter criterion: Content: Sponsor level (field_sponsor_level) */
+  $handler->display->display_options['filters']['field_sponsor_level_tid']['id'] = 'field_sponsor_level_tid';
+  $handler->display->display_options['filters']['field_sponsor_level_tid']['table'] = 'field_data_field_sponsor_level';
+  $handler->display->display_options['filters']['field_sponsor_level_tid']['field'] = 'field_sponsor_level_tid';
+  $handler->display->display_options['filters']['field_sponsor_level_tid']['operator'] = 'between';
+  $handler->display->display_options['filters']['field_sponsor_level_tid']['value'] = array(
+    'min' => '7',
+    'max' => '11',
+    'value' => '',
+  );
+  $handler->display->display_options['filters']['field_sponsor_level_tid']['group'] = '0';
+  $handler->display->display_options['filters']['field_sponsor_level_tid']['vocabulary'] = 'sponsor_level';
+
+  /* Display: Sponsors By Level Block */
+  $handler = $view->new_display('block', 'Sponsors By Level Block', 'sponsors_by_level');
+  $handler->display->display_options['display_description'] = 'Sponsors By Level Block';
+  $translatables['sponsors_by_level'] = array(
+    t('Defaults'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('Sponsors By Level Block'),
+  );
+  $export['sponsors_by_level'] = $view;
+
+  $view = new view();
   $view->name = 'testimonials';
   $view->description = 'Testimonials';
   $view->tag = 'testimonials';
