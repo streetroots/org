@@ -85,5 +85,5 @@ projects[wysiwyg][subdir] = "contrib"
 projects[wysiwyg][version] = "2.2"
 
 ; Themes
-projects[omega][version] = "3.0"
+projects[omega][version] = "4.0"
 
