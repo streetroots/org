@@ -87,3 +87,7 @@ projects[wysiwyg][version] = "2.2"
 ; Themes
 projects[omega][version] = "4.0"
 
+; Profiler
+libraries[profiler][download][type] = "git"
+libraries[profiler][download][branch] = "7.x-2.x"
+libraries[profiler][download][revision] = "2ed2140"
