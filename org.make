@@ -57,6 +57,9 @@ projects[insert][version] = "1.3"
 projects[link][subdir] = "contrib"
 projects[link][version] = "1.3"
 
+projects[libraries][subdir] = "contrib"
+projects[libraries][version] = "2.2"
+
 projects[menu_position][subdir] = "contrib"
 projects[menu_position][version] = "1.1"
 
@@ -74,6 +77,9 @@ projects[stage_file_proxy][version] = "1.6"
 
 projects[strongarm][subdir] = "contrib"
 projects[strongarm][version] = "2.0"
+
+projects[token][subdir] = "contrib"
+projects[token][version] = "1.5"
 
 projects[views][subdir] = "contrib"
 projects[views][version] = "3.8"
