@@ -27,18 +27,10 @@ dependencies[] = shortcut
 dependencies[] = taxonomy
 
 ; Contrib
-dependencies[] = bedrock
-dependencies[] = context_admin
 dependencies[] = ctools
 dependencies[] = entitycache
 dependencies[] = features
-dependencies[] = footable
-dependencies[] = elements
-dependencies[] = fences
-dependencies[] = html5_tools
 dependencies[] = libraries
-dependencies[] = linkchecker
-dependencies[] = navbar
 dependencies[] = pathauto
 dependencies[] = redirect
 dependencies[] = strongarm
@@ -46,7 +38,7 @@ dependencies[] = token
 dependencies[] = wysiwyg
 
 ; Features
-dependencies[] = os_base
+dependencies[] = sr_core
 
 ;
 ; Users
@@ -71,9 +63,6 @@ variables[site_default_country] = US
 ; Up default log limit.
 variables[dblog_row_limit] = 1000000
 
-; Disable core image styles
-variables[os_base_remove_core_image_styles] = 1
-
 ; Up image quality.
 variables[image_jpeg_quality] = 85
 
@@ -87,17 +76,6 @@ variables[user_register] = 0
 
 ; No goofy 'content/title' default alias.
 variables[pathauto_node_pattern] = ''
-
-;
-; Superfish
-;
-variables[superfish_slp] = "profiles/org/libraries/superfish/jquery.hoverIntent.minified.js
-profiles/org/libraries/superfish/jquery.bgiframe.min.js
-profiles/org/libraries/superfish/superfish.js
-profiles/org/libraries/superfish/supersubs.js
-profiles/org/libraries/superfish/supposition.js
-profiles/org/libraries/superfish/sftouchscreen.js
-profiles/org/libraries/superfish/sfsmallscreen.js"
 
 ;
 ; Nodes
