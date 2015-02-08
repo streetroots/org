@@ -85,6 +85,7 @@ projects[wysiwyg][subdir] = "contrib"
 projects[wysiwyg][version] = "2.2"
 
 ; Themes
+projects[omega][subdir] = "contrib"
 projects[omega][version] = "4.0"
 
 ; Profiler
