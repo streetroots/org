@@ -27,6 +27,7 @@ dependencies[] = shortcut
 dependencies[] = taxonomy
 
 ; Contrib
+dependencies[] = admin_menu
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = redirect
