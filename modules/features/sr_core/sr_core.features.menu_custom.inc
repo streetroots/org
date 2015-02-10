@@ -10,12 +10,6 @@
 function sr_core_menu_default_menu_custom() {
   $menus = array();
 
-  // Exported menu: features.
-  $menus['features'] = array(
-    'menu_name' => 'features',
-    'title' => 'Features',
-    'description' => 'Menu items for any enabled features.',
-  );
   // Exported menu: main-menu.
   $menus['main-menu'] = array(
     'menu_name' => 'main-menu',
@@ -39,12 +33,6 @@ function sr_core_menu_default_menu_custom() {
     'menu_name' => 'menu-newsmenu',
     'title' => 'Newspaper Links',
     'description' => 'Menu for newspaper page',
-  );
-  // Exported menu: menu-newspaper.
-  $menus['menu-newspaper'] = array(
-    'menu_name' => 'menu-newspaper',
-    'title' => 'Newspaper',
-    'description' => 'Newspaper menu block',
   );
   // Exported menu: menu-our-work.
   $menus['menu-our-work'] = array(
@@ -80,17 +68,13 @@ function sr_core_menu_default_menu_custom() {
   // Included for use with string extractors like potx.
   t('Advocacy Links');
   t('Contact Links');
-  t('Features');
   t('Main menu');
   t('Menu for Advocacy Page');
   t('Menu for Support Page');
   t('Menu for newspaper page');
-  t('Menu items for any enabled features.');
   t('Most-used contact links');
   t('Navigation');
-  t('Newspaper');
   t('Newspaper Links');
-  t('Newspaper menu block');
   t('Our Work');
   t('Our Work sidebar menu');
   t('Resource Guide Links');

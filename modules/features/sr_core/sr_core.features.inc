@@ -120,6 +120,126 @@ function sr_core_flag_default_flags() {
 function sr_core_image_default_styles() {
   $styles = array();
 
+  // Exported image style: 150tall.
+  $styles['150tall'] = array(
+    'name' => '150tall',
+    'label' => '150tall',
+    'effects' => array(
+      10 => array(
+        'label' => 'Scale',
+        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
+        'effect callback' => 'image_scale_effect',
+        'dimensions callback' => 'image_scale_dimensions',
+        'form callback' => 'image_scale_form',
+        'summary theme' => 'image_scale_summary',
+        'module' => 'image',
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => '',
+          'height' => '150',
+          'upscale' => 0,
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: 150wide.
+  $styles['150wide'] = array(
+    'name' => '150wide',
+    'label' => '150wide',
+    'effects' => array(
+      9 => array(
+        'label' => 'Scale',
+        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
+        'effect callback' => 'image_scale_effect',
+        'dimensions callback' => 'image_scale_dimensions',
+        'form callback' => 'image_scale_form',
+        'summary theme' => 'image_scale_summary',
+        'module' => 'image',
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => '150',
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: 200wide.
+  $styles['200wide'] = array(
+    'name' => '200wide',
+    'label' => '200wide',
+    'effects' => array(
+      8 => array(
+        'label' => 'Scale',
+        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
+        'effect callback' => 'image_scale_effect',
+        'dimensions callback' => 'image_scale_dimensions',
+        'form callback' => 'image_scale_form',
+        'summary theme' => 'image_scale_summary',
+        'module' => 'image',
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => '200',
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: 320wide.
+  $styles['320wide'] = array(
+    'name' => '320wide',
+    'label' => '320wide',
+    'effects' => array(
+      4 => array(
+        'label' => 'Scale',
+        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
+        'effect callback' => 'image_scale_effect',
+        'dimensions callback' => 'image_scale_dimensions',
+        'form callback' => 'image_scale_form',
+        'summary theme' => 'image_scale_summary',
+        'module' => 'image',
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => '320',
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: content_third.
+  $styles['content_third'] = array(
+    'name' => 'content_third',
+    'label' => 'content_third',
+    'effects' => array(
+      7 => array(
+        'label' => 'Scale',
+        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
+        'effect callback' => 'image_scale_effect',
+        'dimensions callback' => 'image_scale_dimensions',
+        'form callback' => 'image_scale_form',
+        'summary theme' => 'image_scale_summary',
+        'module' => 'image',
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => '240',
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
   // Exported image style: gallery.
   $styles['gallery'] = array(
     'name' => 'gallery',
@@ -168,6 +288,76 @@ function sr_core_image_default_styles() {
     ),
   );
 
+  // Exported image style: third.
+  $styles['third'] = array(
+    'name' => 'third',
+    'label' => 'third',
+    'effects' => array(
+      5 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '400',
+          'height' => '400',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: twothirds.
+  $styles['twothirds'] = array(
+    'name' => 'twothirds',
+    'label' => 'twothirds',
+    'effects' => array(
+      6 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '800',
+          'height' => '400',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: vendor_photo_gallery.
+  $styles['vendor_photo_gallery'] = array(
+    'name' => 'vendor_photo_gallery',
+    'label' => 'vendor_photo_gallery',
+    'effects' => array(
+      3 => array(
+        'label' => 'Scale',
+        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
+        'effect callback' => 'image_scale_effect',
+        'dimensions callback' => 'image_scale_dimensions',
+        'form callback' => 'image_scale_form',
+        'summary theme' => 'image_scale_summary',
+        'module' => 'image',
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => '',
+          'height' => '640',
+          'upscale' => 0,
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
   return $styles;
 }
 
@@ -176,14 +366,6 @@ function sr_core_image_default_styles() {
  */
 function sr_core_node_info() {
   $items = array(
-    'advocacy_campaign' => array(
-      'name' => t('Advocacy Campaign'),
-      'base' => 'node_content',
-      'description' => t('Create an advocacy campaign'),
-      'has_title' => '1',
-      'title_label' => t('Advocacy Campaign Name'),
-      'help' => '',
-    ),
     'announcement' => array(
       'name' => t('Announcement'),
       'base' => 'node_content',

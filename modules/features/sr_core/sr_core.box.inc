@@ -70,21 +70,6 @@ function sr_core_default_box() {
   $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
-  $box->delta = 'advocacy_by_type';
-  $box->plugin_key = 'simple';
-  $box->title = 'Advocacy Campaigns Links';
-  $box->description = 'advocacy by type for advocacy program page';
-  $box->options = array(
-    'body' => array(
-      'value' => '<p>Housing</p><p>Health</p><p>Civil Rights</p>',
-      'format' => 'filtered_html',
-    ),
-  );
-  $export['advocacy_by_type'] = $box;
-
-  $box = new stdClass();
-  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
-  $box->api_version = 1;
   $box->delta = 'box-c9035927';
   $box->plugin_key = 'simple';
   $box->title = 'Keep Us Strong';
@@ -531,21 +516,6 @@ function sr_core_default_box() {
   $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
-  $box->delta = 'pubschedule11';
-  $box->plugin_key = 'simple';
-  $box->title = '2011 Publication Schedule';
-  $box->description = '2011 publication schedule';
-  $box->options = array(
-    'body' => array(
-      'value' => '<p>2011 Publication Schedule</p><div>Deadlines are a week before the paper is released unless cleared with the editor in advance.</div><ul><li>Jan. 7<br />Deadline Dec. 31</li><li>Jan. 21<br />Deadline Jan. 14</li><li>Feb. 4<br />Deadline Jan. 28</li><li>Feb. 18<br />Deadline Feb. 11</li><li>March 4<br />Deadline Feb. 25</li><li>March 18<br />Deadline March 11</li><li>April 1<br />Deadline March 25</li><li>April 15<br />Deadline April 8</li><li>April 29<br />Deadline April 22</li><li>May 13<br />Deadline May 6</li><li>May 27<br />Deadline May 20</li><li>June 10<br />Deadline June 3</li><li>June 24<br />Deadline June 17</li><li>July 8<br />Deadline July 1</li><li>July 22<br />Deadline July 15</li><li>Aug. 5<br />Deadline July 29</li><li>Aug. 19<br />Deadline Aug. 12</li><li>Sept. 2<br />Deadline Aug. 26</li><li>Sept. 16<br />Deadline Sept. 9</li><li>Sept. 30<br />Deadline Sept. 23</li><li>Oct. 14<br />Deadline Oct. 7</li><li>Oct. 28<br />Deadline Oct. 21</li><li>Nov. 11<br />Deadline Nov. 4</li><li>Nov. 25<br />Deadline Nov. 16*</li><li>Dec. 9<br />Deadline Dec. 2</li><li>Dec. 23<br />Deadline Dec. 14*&nbsp;</li></ul><div>Submissions are best received by e-mail at joanne@streetroots.org</div><div>Or &nbsp;you can send them by fax: 503-227-3117.</div><div>Or to our office at 211 NW Davis St. Portland, OR 97206</div><div>Questions? Please call Joanne Zuhl at 503-228-5657,</div><div>or write to joanne@streetroots.org</div><div>&nbsp;</div><div>* Early deadlines for holiday printing schedule</div>',
-      'format' => 'filtered_html',
-    ),
-  );
-  $export['pubschedule11'] = $box;
-
-  $box = new stdClass();
-  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
-  $box->api_version = 1;
   $box->delta = 'resource_guide_link';
   $box->plugin_key = 'simple';
   $box->title = '';
@@ -574,6 +544,21 @@ function sr_core_default_box() {
     'additional_classes' => '',
   );
   $export['see_our_friends_and_supporters'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'volunteer_app';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'volunteer_application_link';
+  $box->options = array(
+    'body' => array(
+      'value' => '<h2><a href="/node/1">Fill out a Volunteer Application now</a></h2>',
+      'format' => 'full_html',
+    ),
+  );
+  $export['volunteer_app'] = $box;
 
   $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */

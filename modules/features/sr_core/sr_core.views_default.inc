@@ -1664,6 +1664,136 @@ function sr_core_views_default_views() {
   $export['sponsors_by_level'] = $view;
 
   $view = new view();
+  $view->name = 'sr_testimonials';
+  $view->description = 'Testimonials view for page and block';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Testimonials';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Our Friends Speak About Street Roots';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'body' => 'body',
+    'field_testimonial_name' => 'field_testimonial_name',
+    'edit_node' => 'edit_node',
+  );
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_type'] = 'em';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['hide_alter_empty'] = FALSE;
+  /* Field: Content: Name, title, and organization */
+  $handler->display->display_options['fields']['field_testimonial_name']['id'] = 'field_testimonial_name';
+  $handler->display->display_options['fields']['field_testimonial_name']['table'] = 'field_data_field_testimonial_name';
+  $handler->display->display_options['fields']['field_testimonial_name']['field'] = 'field_testimonial_name';
+  $handler->display->display_options['fields']['field_testimonial_name']['label'] = ' - ';
+  $handler->display->display_options['fields']['field_testimonial_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_testimonial_name']['element_wrapper_type'] = 'em';
+  $handler->display->display_options['fields']['field_testimonial_name']['hide_alter_empty'] = FALSE;
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['edit_node']['hide_alter_empty'] = FALSE;
+  /* Sort criterion: Global: Random */
+  $handler->display->display_options['sorts']['random']['id'] = 'random';
+  $handler->display->display_options['sorts']['random']['table'] = 'views';
+  $handler->display->display_options['sorts']['random']['field'] = 'random';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 0;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'testimonial' => 'testimonial',
+  );
+
+  /* Display: Testimonials Page */
+  $handler = $view->new_display('page', 'Testimonials Page', 'testimonials_page');
+  $handler->display->display_options['display_description'] = 'All testimonials page view';
+  $handler->display->display_options['path'] = 'testimonials';
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'sr_testimonials_block');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'body' => 'body',
+    'field_testimonial_name' => 'field_testimonial_name',
+    'edit_node' => 'edit_node',
+  );
+  $handler->display->display_options['row_options']['separator'] = ' ';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['block_description'] = 'sr_testimonials_block';
+  $translatables['sr_testimonials'] = array(
+    t('Master'),
+    t('Our Friends Speak About Street Roots'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t(' - '),
+    t('Testimonials Page'),
+    t('All testimonials page view'),
+    t('Block'),
+    t('sr_testimonials_block'),
+  );
+  $export['sr_testimonials'] = $view;
+
+  $view = new view();
   $view->name = 'testimonials';
   $view->description = 'Testimonials';
   $view->tag = 'testimonials';
@@ -2051,103 +2181,6 @@ function sr_core_views_default_views() {
   $export['vendor_profile'] = $view;
 
   $view = new view();
-  $view->name = 'vendor_testimonials';
-  $view->description = 'vendor_testimonials';
-  $view->tag = 'vendor_testimonials';
-  $view->base_table = 'node';
-  $view->human_name = 'Vendor Testimonials';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-
-  /* Display: Defaults */
-  $handler = $view->new_display('default', 'Defaults', 'default');
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'none';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['inline'] = array(
-    'entity_id' => 'entity_id',
-    'entity_id_1' => 'entity_id_1',
-    'entity_id_2' => 'entity_id_2',
-  );
-  $handler->display->display_options['row_options']['separator'] = ' ';
-  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
-  /* Field: Content: Body */
-  $handler->display->display_options['fields']['entity_id']['id'] = 'entity_id';
-  $handler->display->display_options['fields']['entity_id']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['entity_id']['field'] = 'body';
-  $handler->display->display_options['fields']['entity_id']['label'] = '';
-  $handler->display->display_options['fields']['entity_id']['alter']['max_length'] = '400';
-  $handler->display->display_options['fields']['entity_id']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['entity_id']['alter']['html'] = TRUE;
-  $handler->display->display_options['fields']['entity_id']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['entity_id']['hide_empty'] = TRUE;
-  /* Field: Content: Name, title, and organization */
-  $handler->display->display_options['fields']['entity_id_1']['id'] = 'entity_id_1';
-  $handler->display->display_options['fields']['entity_id_1']['table'] = 'field_data_field_testimonial_name';
-  $handler->display->display_options['fields']['entity_id_1']['field'] = 'field_testimonial_name';
-  $handler->display->display_options['fields']['entity_id_1']['label'] = ' - ';
-  $handler->display->display_options['fields']['entity_id_1']['element_type'] = 'em';
-  $handler->display->display_options['fields']['entity_id_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['entity_id_1']['hide_empty'] = TRUE;
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['entity_id_2']['id'] = 'entity_id_2';
-  $handler->display->display_options['fields']['entity_id_2']['table'] = 'field_data_field_testimonial_type';
-  $handler->display->display_options['fields']['entity_id_2']['field'] = 'field_testimonial_type';
-  $handler->display->display_options['fields']['entity_id_2']['label'] = '';
-  $handler->display->display_options['fields']['entity_id_2']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['entity_id_2']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['entity_id_2']['hide_empty'] = TRUE;
-  /* Filter criterion: Content: Published or admin */
-  $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
-  $handler->display->display_options['filters']['status_extra']['table'] = 'node';
-  $handler->display->display_options['filters']['status_extra']['field'] = 'status_extra';
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'testimonial' => 'testimonial',
-  );
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['field_testimonial_type_tid']['id'] = 'field_testimonial_type_tid';
-  $handler->display->display_options['filters']['field_testimonial_type_tid']['table'] = 'field_data_field_testimonial_type';
-  $handler->display->display_options['filters']['field_testimonial_type_tid']['field'] = 'field_testimonial_type_tid';
-  $handler->display->display_options['filters']['field_testimonial_type_tid']['value'] = array(
-    'min' => '',
-    'max' => '',
-    'value' => '19',
-  );
-
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block_1');
-  $translatables['vendor_testimonials'] = array(
-    t('Defaults'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t(' - '),
-    t('Block'),
-  );
-  $export['vendor_testimonials'] = $view;
-
-  $view = new view();
   $view->name = 'volunteer_opportunities';
   $view->description = 'Volunteer Opportunities';
   $view->tag = 'Volunteer Opportunities';
@@ -2215,111 +2248,6 @@ function sr_core_views_default_views() {
     t('Volunteer Opportunities Block'),
   );
   $export['volunteer_opportunities'] = $view;
-
-  $view = new view();
-  $view->name = 'volunteer_testimonials';
-  $view->description = 'volunteer_testimonials';
-  $view->tag = 'volunteer_testimonials';
-  $view->base_table = 'node';
-  $view->human_name = 'Volunteer Testimonials';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-
-  /* Display: Defaults */
-  $handler = $view->new_display('default', 'Defaults', 'default');
-  $handler->display->display_options['use_more'] = TRUE;
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'none';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['inline'] = array(
-    'entity_id' => 'entity_id',
-    'entity_id_1' => 'entity_id_1',
-    'entity_id_2' => 'entity_id_2',
-  );
-  $handler->display->display_options['row_options']['separator'] = ' ';
-  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
-  /* Field: Content: Body */
-  $handler->display->display_options['fields']['entity_id']['id'] = 'entity_id';
-  $handler->display->display_options['fields']['entity_id']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['entity_id']['field'] = 'body';
-  $handler->display->display_options['fields']['entity_id']['label'] = '';
-  $handler->display->display_options['fields']['entity_id']['alter']['max_length'] = '400';
-  $handler->display->display_options['fields']['entity_id']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['entity_id']['alter']['html'] = TRUE;
-  $handler->display->display_options['fields']['entity_id']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['entity_id']['hide_empty'] = TRUE;
-  /* Field: Content: Name, title, and organization */
-  $handler->display->display_options['fields']['entity_id_1']['id'] = 'entity_id_1';
-  $handler->display->display_options['fields']['entity_id_1']['table'] = 'field_data_field_testimonial_name';
-  $handler->display->display_options['fields']['entity_id_1']['field'] = 'field_testimonial_name';
-  $handler->display->display_options['fields']['entity_id_1']['label'] = ' - ';
-  $handler->display->display_options['fields']['entity_id_1']['element_type'] = 'em';
-  $handler->display->display_options['fields']['entity_id_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['entity_id_1']['hide_empty'] = TRUE;
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['entity_id_2']['id'] = 'entity_id_2';
-  $handler->display->display_options['fields']['entity_id_2']['table'] = 'field_data_field_testimonial_type';
-  $handler->display->display_options['fields']['entity_id_2']['field'] = 'field_testimonial_type';
-  $handler->display->display_options['fields']['entity_id_2']['label'] = '';
-  $handler->display->display_options['fields']['entity_id_2']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['entity_id_2']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['entity_id_2']['hide_empty'] = TRUE;
-  /* Filter criterion: Content: Published or admin */
-  $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
-  $handler->display->display_options['filters']['status_extra']['table'] = 'node';
-  $handler->display->display_options['filters']['status_extra']['field'] = 'status_extra';
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'testimonial' => 'testimonial',
-  );
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['field_testimonial_type_tid']['id'] = 'field_testimonial_type_tid';
-  $handler->display->display_options['filters']['field_testimonial_type_tid']['table'] = 'field_data_field_testimonial_type';
-  $handler->display->display_options['filters']['field_testimonial_type_tid']['field'] = 'field_testimonial_type_tid';
-  $handler->display->display_options['filters']['field_testimonial_type_tid']['value'] = array(
-    'min' => '',
-    'max' => '',
-    'value' => '20',
-  );
-
-  /* Display: Volunteer Testimonials */
-  $handler = $view->new_display('block', 'Volunteer Testimonials', 'volunteer_testimonials_block');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Why I Volunteer At Street Roots';
-  $handler->display->display_options['display_description'] = 'Why I Volunteer At Street Roots';
-  $translatables['volunteer_testimonials'] = array(
-    t('Defaults'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t(' - '),
-    t('Volunteer Testimonials'),
-    t('Why I Volunteer At Street Roots'),
-  );
-  $export['volunteer_testimonials'] = $view;
 
   return $export;
 }

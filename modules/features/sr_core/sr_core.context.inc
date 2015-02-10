@@ -132,54 +132,6 @@ function sr_core_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'clone_of_sponsors';
-  $context->description = 'sponsor page - legacy testing DELETE';
-  $context->tag = 'sponsors';
-  $context->conditions = array(
-    'path' => array(
-      'values' => array(
-        'node/31' => 'node/31',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'views-63b4d486f75c67e3aa42f2072bc15339' => array(
-          'module' => 'views',
-          'delta' => '63b4d486f75c67e3aa42f2072bc15339',
-          'region' => 'content',
-          'weight' => '-19',
-        ),
-        'views-4e583529c68c466e41c70d366fffe033' => array(
-          'module' => 'views',
-          'delta' => '4e583529c68c466e41c70d366fffe033',
-          'region' => 'content',
-          'weight' => '-18',
-        ),
-        'views-community_partners-block_1' => array(
-          'module' => 'views',
-          'delta' => 'community_partners-block_1',
-          'region' => 'sidebar_first',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-    'debug' => array(
-      'debug' => 1,
-    ),
-  );
-  $context->condition_mode = 0;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('sponsor page - legacy testing DELETE');
-  t('sponsors');
-  $export['clone_of_sponsors'] = $context;
-
-  $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
   $context->name = 'contact';
   $context->description = 'contact page - sidebar links - active';
   $context->tag = 'contact page';
@@ -351,42 +303,6 @@ function sr_core_context_default_contexts() {
   t('home');
   t('homepage - active');
   $export['home'] = $context;
-
-  $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
-  $context->name = 'news';
-  $context->description = 'News - legacy get rid of (feed on node 53 sidebar only) ';
-  $context->tag = 'news';
-  $context->conditions = array(
-    'path' => array(
-      'values' => array(
-        'node/53' => 'node/53',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'aggregator-feed-1' => array(
-          'module' => 'aggregator',
-          'delta' => 'feed-1',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-    'debug' => array(
-      'debug' => 1,
-    ),
-  );
-  $context->condition_mode = 0;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('News - legacy get rid of (feed on node 53 sidebar only) ');
-  t('news');
-  $export['news'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
@@ -664,6 +580,55 @@ function sr_core_context_default_contexts() {
   t('support global blocks - active');
   t('support_global');
   $export['support_global'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'vendor';
+  $context->description = 'Vendor Program Page - duplicate of vendor - active';
+  $context->tag = 'vendor';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'about/vendor' => 'about/vendor',
+        'about/work/vendor' => 'about/work/vendor',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-vendor_profile-block' => array(
+          'module' => 'views',
+          'delta' => 'vendor_profile-block',
+          'region' => 'content',
+          'weight' => '1',
+        ),
+        'views-vendor_photo_gallery-block' => array(
+          'module' => 'views',
+          'delta' => 'vendor_photo_gallery-block',
+          'region' => 'content',
+          'weight' => '1',
+        ),
+        'menu-menu-vendor-program' => array(
+          'module' => 'menu',
+          'delta' => 'menu-vendor-program',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+    'debug' => array(
+      'debug' => 1,
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Vendor Program Page - duplicate of vendor - active');
+  t('vendor');
+  $export['vendor'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
