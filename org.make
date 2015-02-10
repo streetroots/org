@@ -31,7 +31,7 @@ projects[delta][subdir] = "contrib"
 projects[delta][version] = "3.0-beta11"
 
 projects[features][subdir] = "contrib"
-projects[features][version] = "1.0"
+projects[features][version] = "2.3"
 
 projects[media][subdir] = "contrib"
 projects[media][version] = "1.4"

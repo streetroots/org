@@ -42,16 +42,10 @@ function sr_core_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Campaign Image */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_campaign_image']['id'] = 'field_campaign_image';
   $handler->display->display_options['fields']['field_campaign_image']['table'] = 'field_data_field_campaign_image';
   $handler->display->display_options['fields']['field_campaign_image']['field'] = 'field_campaign_image';
-  $handler->display->display_options['fields']['field_campaign_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_campaign_image']['settings'] = array(
-    'image_style' => 'third',
-    'image_link' => 'content',
-  );
-  $handler->display->display_options['fields']['field_campaign_image']['group_column'] = 'fid';
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -100,38 +94,12 @@ function sr_core_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Campaign Image */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_campaign_image']['id'] = 'field_campaign_image';
   $handler->display->display_options['fields']['field_campaign_image']['table'] = 'field_data_field_campaign_image';
   $handler->display->display_options['fields']['field_campaign_image']['field'] = 'field_campaign_image';
   $handler->display->display_options['fields']['field_campaign_image']['label'] = '';
   $handler->display->display_options['fields']['field_campaign_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_campaign_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_campaign_image']['settings'] = array(
-    'image_style' => 'content_third',
-    'image_link' => 'content',
-  );
-  $handler->display->display_options['fields']['field_campaign_image']['group_column'] = 'fid';
-  $translatables['advocacy'] = array(
-    t('Master'),
-    t('Advocacy Campaigns'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Campaign Image'),
-    t('Page'),
-    t('Block'),
-  );
   $export['advocacy'] = $view;
 
   $view = new view();
@@ -181,24 +149,6 @@ function sr_core_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'STREET ROOTS BLOG';
   $handler->display->display_options['display_description'] = 'blogroll_wp';
-  $translatables['blogroll_wp'] = array(
-    t('Defaults'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('blogroll_wp'),
-    t('STREET ROOTS BLOG'),
-  );
   $export['blogroll_wp'] = $view;
 
   $view = new view();
@@ -258,26 +208,6 @@ function sr_core_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');
-  $translatables['community_partners'] = array(
-    t('Defaults'),
-    t('Community Partners'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('node'),
-    t('All'),
-    t('Block'),
-  );
   $export['community_partners'] = $view;
 
   $view = new view();
@@ -368,25 +298,6 @@ function sr_core_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');
-  $translatables['community_testimonials'] = array(
-    t('Defaults'),
-    t('community_testimonials'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t(' - '),
-    t('Block'),
-  );
   $export['community_testimonials'] = $view;
 
   $view = new view();
@@ -448,24 +359,6 @@ function sr_core_views_default_views() {
   /* Display: Foundation Sponsors Block */
   $handler = $view->new_display('block', 'Foundation Sponsors Block', 'foundation_sponsors_block');
   $handler->display->display_options['display_description'] = 'Foundation Sponsors Block';
-  $translatables['foundation_sponsors'] = array(
-    t('Defaults'),
-    t('Foundation Sponsors'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Foundation Sponsors Block'),
-  );
   $export['foundation_sponsors'] = $view;
 
   $view = new view();
@@ -546,23 +439,6 @@ function sr_core_views_default_views() {
   $handler->display->display_options['tab_options']['title'] = 'test gallery';
   $handler->display->display_options['tab_options']['description'] = 'test gallery description';
   $handler->display->display_options['tab_options']['weight'] = '0';
-  $translatables['gallery'] = array(
-    t('Defaults'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Page'),
-  );
   $export['gallery'] = $view;
 
   $view = new view();
@@ -711,26 +587,6 @@ function sr_core_views_default_views() {
   $handler->display->display_options['filters']['sticky']['field'] = 'sticky';
   $handler->display->display_options['filters']['sticky']['value'] = '0';
   $handler->display->display_options['filters']['sticky']['group'] = 1;
-  $translatables['homepage_announcement_1'] = array(
-    t('Defaults'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('homepage_announcement_lower'),
-    t('Announcements'),
-    t('homepage_announcement_upper'),
-    t('top homepage announcement'),
-  );
   $export['homepage_announcement_1'] = $view;
 
   $view = new view();
@@ -796,26 +652,6 @@ function sr_core_views_default_views() {
   $handler = $view->new_display('block', 'Homepage Sponsors Block', 'homepage_sponsors_block');
   $handler->display->display_options['display_description'] = 'Homepage Sponsors Block';
   $handler->display->display_options['link_url'] = 'support/sponsors';
-  $translatables['homepage_sponsors'] = array(
-    t('Defaults'),
-    t('Some of our Sponsors'),
-    t('See all of our sponsors, supporters, and friends'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('flag'),
-    t('Homepage Sponsors Block'),
-    t('more'),
-  );
   $export['homepage_sponsors'] = $view;
 
   $view = new view();
@@ -883,18 +719,6 @@ function sr_core_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
-  $translatables['latest_news'] = array(
-    t('Master'),
-    t('Latest News'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('<a href="[link]" class="read-more">More</a>'),
-    t('Block'),
-  );
   $export['latest_news'] = $view;
 
   $view = new view();
@@ -959,24 +783,6 @@ function sr_core_views_default_views() {
   /* Display: Level Five Sponsors Block */
   $handler = $view->new_display('block', 'Level Five Sponsors Block', 'levelfive_sponsors_block');
   $handler->display->display_options['display_description'] = 'Level Five Sponsors Block';
-  $translatables['levelfive_sponsors'] = array(
-    t('Defaults'),
-    t('Level Five Sponsors'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Level Five Sponsors Block'),
-  );
   $export['levelfive_sponsors'] = $view;
 
   $view = new view();
@@ -1038,24 +844,6 @@ function sr_core_views_default_views() {
   /* Display: Sustaining Sponsors Block */
   $handler = $view->new_display('block', 'Sustaining Sponsors Block', 'levelfour_sponsors_block');
   $handler->display->display_options['display_description'] = 'Sustaining Sponsors Block';
-  $translatables['levelfour_sponsors'] = array(
-    t('Defaults'),
-    t('Sustaining Sponsors'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Sustaining Sponsors Block'),
-  );
   $export['levelfour_sponsors'] = $view;
 
   $view = new view();
@@ -1117,24 +905,6 @@ function sr_core_views_default_views() {
   /* Display: Visionary Sponsors Block */
   $handler = $view->new_display('block', 'Visionary Sponsors Block', 'levelone_sponsors_block');
   $handler->display->display_options['display_description'] = 'Visionary Sponsors Block';
-  $translatables['levelone_sponsors'] = array(
-    t('Defaults'),
-    t('Visionary Sponsors'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Visionary Sponsors Block'),
-  );
   $export['levelone_sponsors'] = $view;
 
   $view = new view();
@@ -1196,24 +966,6 @@ function sr_core_views_default_views() {
   /* Display: Catalyst Sponsors Block */
   $handler = $view->new_display('block', 'Catalyst Sponsors Block', 'levelthree_sponsors_block');
   $handler->display->display_options['display_description'] = 'Catalyst Sponsors Block';
-  $translatables['levelthree_sponsors'] = array(
-    t('Defaults'),
-    t('Catalyst Sponsors'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Catalyst Sponsors Block'),
-  );
   $export['levelthree_sponsors'] = $view;
 
   $view = new view();
@@ -1275,24 +1027,6 @@ function sr_core_views_default_views() {
   /* Display: Change Maker Sponsors Block */
   $handler = $view->new_display('block', 'Change Maker Sponsors Block', 'leveltwo_sponsors_block');
   $handler->display->display_options['display_description'] = 'Change Maker Sponsors Block';
-  $translatables['leveltwo_sponsors'] = array(
-    t('Defaults'),
-    t('Change Maker Sponsors'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Change Maker Sponsors Block'),
-  );
   $export['leveltwo_sponsors'] = $view;
 
   $view = new view();
@@ -1366,20 +1100,6 @@ function sr_core_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['block_description'] = 'Queue \'testimonial_nodequeue\'';
-  $translatables['nodequeue_1'] = array(
-    t('Defaults'),
-    t('Queue \'testimonial_nodequeue\''),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('queue'),
-    t(' - '),
-    t('Page'),
-    t('Block'),
-  );
   $export['nodequeue_1'] = $view;
 
   $view = new view();
@@ -1479,25 +1199,6 @@ function sr_core_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_1');
   $handler->display->display_options['path'] = 'about/people';
-  $translatables['our_people'] = array(
-    t('Defaults'),
-    t('Our People'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('term'),
-    t('Page'),
-  );
   $export['our_people'] = $view;
 
   $view = new view();
@@ -1558,24 +1259,6 @@ function sr_core_views_default_views() {
   /* Display: Resource Guide Sponsors Block */
   $handler = $view->new_display('block', 'Resource Guide Sponsors Block', 'resourceguide_sponsors');
   $handler->display->display_options['display_description'] = 'Resource Guide Sponsors Block';
-  $translatables['resourceguide_sponsors'] = array(
-    t('Defaults'),
-    t('Resource Guide Sponsors'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Resource Guide Sponsors Block'),
-  );
   $export['resourceguide_sponsors'] = $view;
 
   $view = new view();
@@ -1644,23 +1327,6 @@ function sr_core_views_default_views() {
   /* Display: Sponsors By Level Block */
   $handler = $view->new_display('block', 'Sponsors By Level Block', 'sponsors_by_level');
   $handler->display->display_options['display_description'] = 'Sponsors By Level Block';
-  $translatables['sponsors_by_level'] = array(
-    t('Defaults'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Sponsors By Level Block'),
-  );
   $export['sponsors_by_level'] = $view;
 
   $view = new view();
@@ -1769,28 +1435,6 @@ function sr_core_views_default_views() {
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['block_description'] = 'sr_testimonials_block';
-  $translatables['sr_testimonials'] = array(
-    t('Master'),
-    t('Our Friends Speak About Street Roots'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t(' - '),
-    t('Testimonials Page'),
-    t('All testimonials page view'),
-    t('Block'),
-    t('sr_testimonials_block'),
-  );
   $export['sr_testimonials'] = $view;
 
   $view = new view();
@@ -1857,23 +1501,6 @@ function sr_core_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'testimonial' => 'testimonial',
-  );
-  $translatables['testimonials'] = array(
-    t('Defaults'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t(' - '),
   );
   $export['testimonials'] = $view;
 
@@ -2001,26 +1628,6 @@ function sr_core_views_default_views() {
   $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '200',
-  );
-  $translatables['vendor_photo_gallery'] = array(
-    t('Master'),
-    t('Photo Galleries'),
-    t('More Vendor Photo Galleries'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Page'),
-    t('more'),
-    t('Block'),
   );
   $export['vendor_photo_gallery'] = $view;
 
@@ -2156,28 +1763,6 @@ function sr_core_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '200',
   );
-  $translatables['vendor_profile'] = array(
-    t('Master'),
-    t('Vendor Profile'),
-    t('See more Vendor Profiles'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Page'),
-    t('Vendor Profiles'),
-    t('more'),
-    t('Feed'),
-    t('Block'),
-  );
   $export['vendor_profile'] = $view;
 
   $view = new view();
@@ -2229,24 +1814,6 @@ function sr_core_views_default_views() {
   /* Display: Volunteer Opportunities Block */
   $handler = $view->new_display('block', 'Volunteer Opportunities Block', 'block_1');
   $handler->display->display_options['display_description'] = 'Volunteer Opportunities Block';
-  $translatables['volunteer_opportunities'] = array(
-    t('Defaults'),
-    t('Some of our Volunteer Opportunities'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Volunteer Opportunities Block'),
-  );
   $export['volunteer_opportunities'] = $view;
 
   return $export;
