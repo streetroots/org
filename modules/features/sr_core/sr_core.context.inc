@@ -14,7 +14,7 @@ function sr_core_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'about';
-  $context->description = 'About - active';
+  $context->description = 'About page';
   $context->tag = 'about';
   $context->conditions = array(
     'path' => array(
@@ -69,7 +69,7 @@ function sr_core_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('About - active');
+  t('About page');
   t('about');
   $export['about'] = $context;
 
@@ -77,7 +77,7 @@ function sr_core_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'advertise';
-  $context->description = 'advertising page - active';
+  $context->description = 'advertising page - adds advertising inquiry link';
   $context->tag = 'advertise';
   $context->conditions = array(
     'path' => array(
@@ -103,14 +103,14 @@ function sr_core_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('advertise');
-  t('advertising page - active');
+  t('advertising page - adds advertising inquiry link');
   $export['advertise'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'advocacy';
-  $context->description = 'Advocacy Page - active';
+  $context->description = 'Advocacy Page - empty (no context reactions) but placeholder';
   $context->tag = 'advocacy';
   $context->conditions = array(
     'path' => array(
@@ -125,7 +125,7 @@ function sr_core_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Advocacy Page - active');
+  t('Advocacy Page - empty (no context reactions) but placeholder');
   t('advocacy');
   $export['advocacy'] = $context;
 
@@ -133,13 +133,12 @@ function sr_core_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'contact';
-  $context->description = 'contact page - sidebar links - active';
+  $context->description = 'contact page - sidebar links for contacting the organziaton';
   $context->tag = 'contact page';
   $context->conditions = array(
     'path' => array(
       'values' => array(
         'contact' => 'contact',
-        'node/36' => 'node/36',
       ),
     ),
   );
@@ -160,7 +159,7 @@ function sr_core_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('contact page');
-  t('contact page - sidebar links - active');
+  t('contact page - sidebar links for contacting the organziaton');
   $export['contact'] = $context;
 
   $context = new stdClass();
